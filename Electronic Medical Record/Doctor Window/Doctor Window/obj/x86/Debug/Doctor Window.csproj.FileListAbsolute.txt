@@ -1,0 +1,32 @@
+E:\Project\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.exe
+E:\Project\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.pdb
+C:\Users\SONY\Desktop\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.exe
+C:\Users\SONY\Desktop\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.pdb
+C:\Users\SONY\Desktop\Doctor Window\Doctor Window\bin\Debug\Doctor Window.exe
+C:\Users\SONY\Desktop\Doctor Window\Doctor Window\bin\Debug\Doctor Window.pdb
+C:\Users\SONY\Desktop\Doctor Window\Doctor Window\obj\x86\Debug\Doctor_Window.Doctor_frm.resources
+C:\Users\SONY\Desktop\Doctor Window\Doctor Window\obj\x86\Debug\Doctor_Window.Form1.resources
+C:\Users\SONY\Desktop\Doctor Window\Doctor Window\obj\x86\Debug\Doctor_Window.Properties.Resources.resources
+C:\Users\SONY\Desktop\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.csproj.GenerateResource.Cache
+C:\Users\SONY\Desktop\Doctor Window\Doctor Window\bin\Debug\itextsharp.dll
+C:\Users\SONY\Desktop\Doctor Window\Doctor Window\bin\Debug\itextsharp.pdfa.dll
+C:\Users\SONY\Desktop\Doctor Window\Doctor Window\bin\Debug\itextsharp.xtra.dll
+C:\Users\SONY\Desktop\Doctor Window\Doctor Window\bin\Debug\itextsharp.xml
+F:\Project\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.exe
+F:\Project\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.pdb
+F:\Project\Doctor Window\Doctor Window\bin\Debug\Doctor Window.exe
+F:\Project\Doctor Window\Doctor Window\bin\Debug\Doctor Window.pdb
+F:\Project\Doctor Window\Doctor Window\bin\Debug\itextsharp.xml
+F:\Project\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.csprojResolveAssemblyReference.cache
+F:\Project\Doctor Window\Doctor Window\obj\x86\Debug\Doctor_Window.Doctor_frm.resources
+F:\Project\Doctor Window\Doctor Window\obj\x86\Debug\Doctor_Window.Form1.resources
+F:\Project\Doctor Window\Doctor Window\obj\x86\Debug\Doctor_Window.Properties.Resources.resources
+F:\Project\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.csproj.GenerateResource.Cache
+C:\Users\SONY\Desktop\Visual Studio\Doctor Window\Doctor Window\bin\Debug\Doctor Window.exe
+C:\Users\SONY\Desktop\Visual Studio\Doctor Window\Doctor Window\bin\Debug\Doctor Window.pdb
+C:\Users\SONY\Desktop\Visual Studio\Doctor Window\Doctor Window\obj\x86\Debug\Doctor_Window.Doctor_frm.resources
+C:\Users\SONY\Desktop\Visual Studio\Doctor Window\Doctor Window\obj\x86\Debug\Doctor_Window.Form1.resources
+C:\Users\SONY\Desktop\Visual Studio\Doctor Window\Doctor Window\obj\x86\Debug\Doctor_Window.Properties.Resources.resources
+C:\Users\SONY\Desktop\Visual Studio\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.csproj.GenerateResource.Cache
+C:\Users\SONY\Desktop\Visual Studio\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.exe
+C:\Users\SONY\Desktop\Visual Studio\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.pdb
