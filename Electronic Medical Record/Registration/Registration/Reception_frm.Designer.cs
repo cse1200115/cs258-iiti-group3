@@ -117,39 +117,30 @@
             this.radioButton17 = new System.Windows.Forms.RadioButton();
             this.radioButton18 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox_vpd_blood = new System.Windows.Forms.TextBox();
+            this.textBox_vpd_martial = new System.Windows.Forms.TextBox();
+            this.textBox_vpd_dob = new System.Windows.Forms.TextBox();
+            this.textBox_vpd_gender = new System.Windows.Forms.TextBox();
+            this.textBox_vpd_year_of_join = new System.Windows.Forms.TextBox();
+            this.textBox_vpd_branch = new System.Windows.Forms.TextBox();
+            this.textBox_vpd_edu = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.radioButton15 = new System.Windows.Forms.RadioButton();
-            this.radioButton16 = new System.Windows.Forms.RadioButton();
+            this.textBox_vpd_insurance = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
-            this.radioButton13 = new System.Windows.Forms.RadioButton();
-            this.radioButton14 = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox_vpd_guad_contact = new System.Windows.Forms.TextBox();
+            this.textBox_vpd_contact = new System.Windows.Forms.TextBox();
+            this.richTextBox_vpd_local_add = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_vpd_perm_add = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_vpd_corres_add = new System.Windows.Forms.RichTextBox();
+            this.textBox_vpd_id = new System.Windows.Forms.TextBox();
+            this.textBox_vpd_lname = new System.Windows.Forms.TextBox();
+            this.textBox_vpd_mname = new System.Windows.Forms.TextBox();
             this.textBox_vpd_fname = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_vpd = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -160,7 +151,6 @@
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
@@ -178,7 +168,7 @@
             this.tab_modify.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_vpd)).BeginInit();
             this.SuspendLayout();
             // 
             // File
@@ -1065,39 +1055,30 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox_vpd_blood);
+            this.groupBox1.Controls.Add(this.textBox_vpd_martial);
+            this.groupBox1.Controls.Add(this.textBox_vpd_dob);
+            this.groupBox1.Controls.Add(this.textBox_vpd_gender);
+            this.groupBox1.Controls.Add(this.textBox_vpd_year_of_join);
+            this.groupBox1.Controls.Add(this.textBox_vpd_branch);
+            this.groupBox1.Controls.Add(this.textBox_vpd_edu);
             this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.textBox14);
-            this.groupBox1.Controls.Add(this.comboBox4);
-            this.groupBox1.Controls.Add(this.radioButton15);
-            this.groupBox1.Controls.Add(this.radioButton16);
+            this.groupBox1.Controls.Add(this.textBox_vpd_insurance);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.label41);
             this.groupBox1.Controls.Add(this.label42);
             this.groupBox1.Controls.Add(this.label43);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.richTextBox4);
-            this.groupBox1.Controls.Add(this.richTextBox5);
-            this.groupBox1.Controls.Add(this.richTextBox6);
-            this.groupBox1.Controls.Add(this.radioButton9);
-            this.groupBox1.Controls.Add(this.radioButton10);
-            this.groupBox1.Controls.Add(this.radioButton11);
-            this.groupBox1.Controls.Add(this.textBox10);
-            this.groupBox1.Controls.Add(this.dateTimePicker5);
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.checkBox4);
-            this.groupBox1.Controls.Add(this.checkBox5);
-            this.groupBox1.Controls.Add(this.checkBox6);
-            this.groupBox1.Controls.Add(this.radioButton12);
-            this.groupBox1.Controls.Add(this.radioButton13);
-            this.groupBox1.Controls.Add(this.radioButton14);
-            this.groupBox1.Controls.Add(this.dateTimePicker6);
-            this.groupBox1.Controls.Add(this.textBox11);
-            this.groupBox1.Controls.Add(this.textBox12);
+            this.groupBox1.Controls.Add(this.textBox_vpd_guad_contact);
+            this.groupBox1.Controls.Add(this.textBox_vpd_contact);
+            this.groupBox1.Controls.Add(this.richTextBox_vpd_local_add);
+            this.groupBox1.Controls.Add(this.richTextBox_vpd_perm_add);
+            this.groupBox1.Controls.Add(this.richTextBox_vpd_corres_add);
+            this.groupBox1.Controls.Add(this.textBox_vpd_id);
+            this.groupBox1.Controls.Add(this.textBox_vpd_lname);
+            this.groupBox1.Controls.Add(this.textBox_vpd_mname);
             this.groupBox1.Controls.Add(this.textBox_vpd_fname);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.pictureBox2);
+            this.groupBox1.Controls.Add(this.pictureBox_vpd);
             this.groupBox1.Controls.Add(this.label21);
             this.groupBox1.Controls.Add(this.label27);
             this.groupBox1.Controls.Add(this.label28);
@@ -1108,7 +1089,6 @@
             this.groupBox1.Controls.Add(this.label33);
             this.groupBox1.Controls.Add(this.label34);
             this.groupBox1.Controls.Add(this.label35);
-            this.groupBox1.Controls.Add(this.label36);
             this.groupBox1.Controls.Add(this.label37);
             this.groupBox1.Controls.Add(this.label38);
             this.groupBox1.Controls.Add(this.label39);
@@ -1121,6 +1101,55 @@
             this.groupBox1.Text = "Patient\'s Detail";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // textBox_vpd_blood
+            // 
+            this.textBox_vpd_blood.Location = new System.Drawing.Point(404, 580);
+            this.textBox_vpd_blood.Name = "textBox_vpd_blood";
+            this.textBox_vpd_blood.Size = new System.Drawing.Size(139, 20);
+            this.textBox_vpd_blood.TabIndex = 98;
+            // 
+            // textBox_vpd_martial
+            // 
+            this.textBox_vpd_martial.Location = new System.Drawing.Point(125, 542);
+            this.textBox_vpd_martial.Name = "textBox_vpd_martial";
+            this.textBox_vpd_martial.Size = new System.Drawing.Size(140, 20);
+            this.textBox_vpd_martial.TabIndex = 97;
+            // 
+            // textBox_vpd_dob
+            // 
+            this.textBox_vpd_dob.Location = new System.Drawing.Point(128, 111);
+            this.textBox_vpd_dob.Name = "textBox_vpd_dob";
+            this.textBox_vpd_dob.Size = new System.Drawing.Size(197, 20);
+            this.textBox_vpd_dob.TabIndex = 96;
+            // 
+            // textBox_vpd_gender
+            // 
+            this.textBox_vpd_gender.Location = new System.Drawing.Point(125, 277);
+            this.textBox_vpd_gender.Name = "textBox_vpd_gender";
+            this.textBox_vpd_gender.Size = new System.Drawing.Size(200, 20);
+            this.textBox_vpd_gender.TabIndex = 95;
+            // 
+            // textBox_vpd_year_of_join
+            // 
+            this.textBox_vpd_year_of_join.Location = new System.Drawing.Point(128, 217);
+            this.textBox_vpd_year_of_join.Name = "textBox_vpd_year_of_join";
+            this.textBox_vpd_year_of_join.Size = new System.Drawing.Size(197, 20);
+            this.textBox_vpd_year_of_join.TabIndex = 94;
+            // 
+            // textBox_vpd_branch
+            // 
+            this.textBox_vpd_branch.Location = new System.Drawing.Point(128, 185);
+            this.textBox_vpd_branch.Name = "textBox_vpd_branch";
+            this.textBox_vpd_branch.Size = new System.Drawing.Size(197, 20);
+            this.textBox_vpd_branch.TabIndex = 93;
+            // 
+            // textBox_vpd_edu
+            // 
+            this.textBox_vpd_edu.Location = new System.Drawing.Point(128, 158);
+            this.textBox_vpd_edu.Name = "textBox_vpd_edu";
+            this.textBox_vpd_edu.Size = new System.Drawing.Size(197, 20);
+            this.textBox_vpd_edu.TabIndex = 92;
+            // 
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(320, 672);
@@ -1130,42 +1159,12 @@
             this.button7.Text = "Update";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // textBox14
+            // textBox_vpd_insurance
             // 
-            this.textBox14.Location = new System.Drawing.Point(128, 623);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(415, 20);
-            this.textBox14.TabIndex = 90;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(404, 580);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(139, 21);
-            this.comboBox4.TabIndex = 89;
-            // 
-            // radioButton15
-            // 
-            this.radioButton15.AutoSize = true;
-            this.radioButton15.Location = new System.Drawing.Point(198, 548);
-            this.radioButton15.Name = "radioButton15";
-            this.radioButton15.Size = new System.Drawing.Size(74, 17);
-            this.radioButton15.TabIndex = 88;
-            this.radioButton15.TabStop = true;
-            this.radioButton15.Text = "UnMarried";
-            this.radioButton15.UseVisualStyleBackColor = true;
-            // 
-            // radioButton16
-            // 
-            this.radioButton16.AutoSize = true;
-            this.radioButton16.Location = new System.Drawing.Point(128, 548);
-            this.radioButton16.Name = "radioButton16";
-            this.radioButton16.Size = new System.Drawing.Size(60, 17);
-            this.radioButton16.TabIndex = 87;
-            this.radioButton16.TabStop = true;
-            this.radioButton16.Text = "Married";
-            this.radioButton16.UseVisualStyleBackColor = true;
+            this.textBox_vpd_insurance.Location = new System.Drawing.Point(128, 623);
+            this.textBox_vpd_insurance.Name = "textBox_vpd_insurance";
+            this.textBox_vpd_insurance.Size = new System.Drawing.Size(415, 20);
+            this.textBox_vpd_insurance.TabIndex = 90;
             // 
             // button3
             // 
@@ -1213,182 +1212,65 @@
             this.label43.TabIndex = 82;
             this.label43.Text = "Blood Group";
             // 
-            // textBox8
+            // textBox_vpd_guad_contact
             // 
-            this.textBox8.Location = new System.Drawing.Point(404, 543);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(139, 20);
-            this.textBox8.TabIndex = 81;
+            this.textBox_vpd_guad_contact.Location = new System.Drawing.Point(404, 543);
+            this.textBox_vpd_guad_contact.Name = "textBox_vpd_guad_contact";
+            this.textBox_vpd_guad_contact.Size = new System.Drawing.Size(139, 20);
+            this.textBox_vpd_guad_contact.TabIndex = 81;
             // 
-            // textBox9
+            // textBox_vpd_contact
             // 
-            this.textBox9.Location = new System.Drawing.Point(125, 509);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(140, 20);
-            this.textBox9.TabIndex = 80;
+            this.textBox_vpd_contact.Location = new System.Drawing.Point(125, 509);
+            this.textBox_vpd_contact.Name = "textBox_vpd_contact";
+            this.textBox_vpd_contact.Size = new System.Drawing.Size(140, 20);
+            this.textBox_vpd_contact.TabIndex = 80;
             // 
-            // richTextBox4
+            // richTextBox_vpd_local_add
             // 
-            this.richTextBox4.Location = new System.Drawing.Point(125, 422);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(415, 52);
-            this.richTextBox4.TabIndex = 79;
-            this.richTextBox4.Text = "";
+            this.richTextBox_vpd_local_add.Location = new System.Drawing.Point(125, 422);
+            this.richTextBox_vpd_local_add.Name = "richTextBox_vpd_local_add";
+            this.richTextBox_vpd_local_add.Size = new System.Drawing.Size(415, 52);
+            this.richTextBox_vpd_local_add.TabIndex = 79;
+            this.richTextBox_vpd_local_add.Text = "";
             // 
-            // richTextBox5
+            // richTextBox_vpd_perm_add
             // 
-            this.richTextBox5.Location = new System.Drawing.Point(125, 368);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(415, 48);
-            this.richTextBox5.TabIndex = 78;
-            this.richTextBox5.Text = "";
+            this.richTextBox_vpd_perm_add.Location = new System.Drawing.Point(125, 368);
+            this.richTextBox_vpd_perm_add.Name = "richTextBox_vpd_perm_add";
+            this.richTextBox_vpd_perm_add.Size = new System.Drawing.Size(415, 48);
+            this.richTextBox_vpd_perm_add.TabIndex = 78;
+            this.richTextBox_vpd_perm_add.Text = "";
             // 
-            // richTextBox6
+            // richTextBox_vpd_corres_add
             // 
-            this.richTextBox6.Location = new System.Drawing.Point(125, 311);
-            this.richTextBox6.Name = "richTextBox6";
-            this.richTextBox6.Size = new System.Drawing.Size(415, 51);
-            this.richTextBox6.TabIndex = 77;
-            this.richTextBox6.Text = "";
+            this.richTextBox_vpd_corres_add.Location = new System.Drawing.Point(125, 311);
+            this.richTextBox_vpd_corres_add.Name = "richTextBox_vpd_corres_add";
+            this.richTextBox_vpd_corres_add.Size = new System.Drawing.Size(415, 51);
+            this.richTextBox_vpd_corres_add.TabIndex = 77;
+            this.richTextBox_vpd_corres_add.Text = "";
             // 
-            // radioButton9
+            // textBox_vpd_id
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(274, 284);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(51, 17);
-            this.radioButton9.TabIndex = 76;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "Other";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.textBox_vpd_id.Location = new System.Drawing.Point(125, 250);
+            this.textBox_vpd_id.Name = "textBox_vpd_id";
+            this.textBox_vpd_id.Size = new System.Drawing.Size(200, 20);
+            this.textBox_vpd_id.TabIndex = 73;
+            this.textBox_vpd_id.TextChanged += new System.EventHandler(this.textBox_vpd_id_TextChanged);
             // 
-            // radioButton10
+            // textBox_vpd_lname
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(195, 284);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(59, 17);
-            this.radioButton10.TabIndex = 75;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Female";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.textBox_vpd_lname.Location = new System.Drawing.Point(125, 82);
+            this.textBox_vpd_lname.Name = "textBox_vpd_lname";
+            this.textBox_vpd_lname.Size = new System.Drawing.Size(200, 20);
+            this.textBox_vpd_lname.TabIndex = 63;
             // 
-            // radioButton11
+            // textBox_vpd_mname
             // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(125, 284);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(48, 17);
-            this.radioButton11.TabIndex = 74;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "Male";
-            this.radioButton11.UseVisualStyleBackColor = true;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(125, 250);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(200, 20);
-            this.textBox10.TabIndex = 73;
-            // 
-            // dateTimePicker5
-            // 
-            this.dateTimePicker5.Location = new System.Drawing.Point(125, 217);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker5.TabIndex = 72;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(125, 190);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(200, 21);
-            this.comboBox3.TabIndex = 71;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(276, 163);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(49, 17);
-            this.checkBox4.TabIndex = 70;
-            this.checkBox4.Text = "PHD";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(195, 167);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(66, 17);
-            this.checkBox5.TabIndex = 69;
-            this.checkBox5.Text = "M Tech.";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(125, 167);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(64, 17);
-            this.checkBox6.TabIndex = 68;
-            this.checkBox6.Text = "B Tech.";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // radioButton12
-            // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(274, 135);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(51, 17);
-            this.radioButton12.TabIndex = 67;
-            this.radioButton12.TabStop = true;
-            this.radioButton12.Text = "Other";
-            this.radioButton12.UseVisualStyleBackColor = true;
-            // 
-            // radioButton13
-            // 
-            this.radioButton13.AutoSize = true;
-            this.radioButton13.Location = new System.Drawing.Point(195, 135);
-            this.radioButton13.Name = "radioButton13";
-            this.radioButton13.Size = new System.Drawing.Size(59, 17);
-            this.radioButton13.TabIndex = 66;
-            this.radioButton13.TabStop = true;
-            this.radioButton13.Text = "Faculty";
-            this.radioButton13.UseVisualStyleBackColor = true;
-            // 
-            // radioButton14
-            // 
-            this.radioButton14.AutoSize = true;
-            this.radioButton14.Location = new System.Drawing.Point(125, 135);
-            this.radioButton14.Name = "radioButton14";
-            this.radioButton14.Size = new System.Drawing.Size(62, 17);
-            this.radioButton14.TabIndex = 65;
-            this.radioButton14.TabStop = true;
-            this.radioButton14.Text = "Student";
-            this.radioButton14.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker6
-            // 
-            this.dateTimePicker6.Location = new System.Drawing.Point(125, 108);
-            this.dateTimePicker6.Name = "dateTimePicker6";
-            this.dateTimePicker6.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker6.TabIndex = 64;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(125, 82);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(200, 20);
-            this.textBox11.TabIndex = 63;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(125, 55);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(200, 20);
-            this.textBox12.TabIndex = 62;
+            this.textBox_vpd_mname.Location = new System.Drawing.Point(125, 55);
+            this.textBox_vpd_mname.Name = "textBox_vpd_mname";
+            this.textBox_vpd_mname.Size = new System.Drawing.Size(200, 20);
+            this.textBox_vpd_mname.TabIndex = 62;
             // 
             // textBox_vpd_fname
             // 
@@ -1398,22 +1280,13 @@
             this.textBox_vpd_fname.TabIndex = 61;
             this.textBox_vpd_fname.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
             // 
-            // button2
+            // pictureBox_vpd
             // 
-            this.button2.Location = new System.Drawing.Point(410, 229);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 23);
-            this.button2.TabIndex = 60;
-            this.button2.Text = "Upload Image";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(385, 55);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(155, 149);
-            this.pictureBox2.TabIndex = 59;
-            this.pictureBox2.TabStop = false;
+            this.pictureBox_vpd.Location = new System.Drawing.Point(385, 55);
+            this.pictureBox_vpd.Name = "pictureBox_vpd";
+            this.pictureBox_vpd.Size = new System.Drawing.Size(155, 149);
+            this.pictureBox_vpd.TabIndex = 59;
+            this.pictureBox_vpd.TabStop = false;
             // 
             // label21
             // 
@@ -1505,15 +1378,6 @@
             this.label35.TabIndex = 49;
             this.label35.Text = "Education";
             // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(17, 137);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(62, 13);
-            this.label36.TabIndex = 48;
-            this.label36.Text = "Occupation";
-            // 
             // label37
             // 
             this.label37.AutoSize = true;
@@ -1593,7 +1457,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_vpd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1632,29 +1496,16 @@
         private System.Windows.Forms.Button btn_reg;
         private System.Windows.Forms.TabPage tab_modify;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.RichTextBox richTextBox4;
-        private System.Windows.Forms.RichTextBox richTextBox5;
-        private System.Windows.Forms.RichTextBox richTextBox6;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.DateTimePicker dateTimePicker5;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.RadioButton radioButton12;
-        private System.Windows.Forms.RadioButton radioButton13;
-        private System.Windows.Forms.RadioButton radioButton14;
-        private System.Windows.Forms.DateTimePicker dateTimePicker6;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox_vpd_guad_contact;
+        private System.Windows.Forms.TextBox textBox_vpd_contact;
+        private System.Windows.Forms.RichTextBox richTextBox_vpd_local_add;
+        private System.Windows.Forms.RichTextBox richTextBox_vpd_perm_add;
+        private System.Windows.Forms.RichTextBox richTextBox_vpd_corres_add;
+        private System.Windows.Forms.TextBox textBox_vpd_id;
+        private System.Windows.Forms.TextBox textBox_vpd_lname;
+        private System.Windows.Forms.TextBox textBox_vpd_mname;
         private System.Windows.Forms.TextBox textBox_vpd_fname;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox_vpd;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
@@ -1665,15 +1516,11 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.RadioButton radioButton15;
-        private System.Windows.Forms.RadioButton radioButton16;
+        private System.Windows.Forms.TextBox textBox_vpd_insurance;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label41;
@@ -1738,6 +1585,13 @@
         private System.Windows.Forms.GroupBox groupBox_martial;
         private System.Windows.Forms.GroupBox groupBox_gender;
         private System.Windows.Forms.TextBox textBox_date_time;
+        private System.Windows.Forms.TextBox textBox_vpd_year_of_join;
+        private System.Windows.Forms.TextBox textBox_vpd_branch;
+        private System.Windows.Forms.TextBox textBox_vpd_edu;
+        private System.Windows.Forms.TextBox textBox_vpd_dob;
+        private System.Windows.Forms.TextBox textBox_vpd_gender;
+        private System.Windows.Forms.TextBox textBox_vpd_blood;
+        private System.Windows.Forms.TextBox textBox_vpd_martial;
 
     }
 }

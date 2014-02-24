@@ -24,7 +24,7 @@ namespace Doctor_Window
         }
 
         string str ="Data Source=VAIO\\SQLEXPRESS;Initial Catalog=Medical_Records;Integrated Security=True";
-        string curr_listbox_item;
+        string curr_listbox_item="";
         string img_path="";
 
         
@@ -56,7 +56,7 @@ namespace Doctor_Window
             {
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
-                string query = "SELECT * FROM " + curr_listbox_item;
+                string query = "SELECT * FROM '"+curr_listbox_item+"';";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -69,7 +69,7 @@ namespace Doctor_Window
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+               MessageBox.Show(ex.Message);
             }
         }
         private void changeUsernameToolStripMenuItem_Click(object sender, EventArgs e)
@@ -228,7 +228,7 @@ namespace Doctor_Window
 
             try
             {
-                string query = "SELECT * FROM Student_Profile WHERE ID= " + curr_listbox_item;
+                string query = "SELECT * FROM Student_Profile WHERE ID='"+curr_listbox_item+"';";
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -237,11 +237,35 @@ namespace Doctor_Window
                 if (reader.Read())
                 {
                     textBox_fname.Text = reader.GetString(0);
-                    // do the same for others
+                    textBox_mname.Text = reader.GetString(1);
+                    textBox_lname.Text = reader.GetString(2);
+                    textBox5_dob.Text = reader.GetString(3);
+                    textBox_education.Text = reader.GetString(4);
+                    textBox_branch.Text = reader.GetString(5);
+                    textBox_Y_of_joining.Text = reader.GetString(6);
+                    textBox_roll_no.Text = reader.GetString(7);
+                    textBox_gender.Text = reader.GetString(8);
+                    richTextBox_permanent_Add.Text = reader.GetString(10);
+                    richTextBox_local_add.Text = reader.GetString(11);
+                    textBox_pt_record.Text = reader.GetString(12);
+                    textBox_gud_contact.Text = reader.GetString(13);
+                    textBox_martial_status.Text=reader.GetString(14);
+                    textBox_blood.Text = reader.GetString(15);
+
+                    byte[] imgg = (byte[])(reader["Image"]);
+                    if (imgg == null)
+                    {
+                        pictureBox_roll_no.Image = null;
+                    }
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream(imgg);
+                        pictureBox_roll_no.Image = System.Drawing.Image.FromStream(ms);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Data not present in the database");
+                    MessageBox.Show("Data not present");
                 }
             }
             catch (Exception ex)
@@ -271,14 +295,15 @@ namespace Doctor_Window
             {
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
-                string query = "SELECT * FROM "+ curr_listbox_item + " WHERE Date_Time = " + date;
+                string query = "SELECT * FROM '"+curr_listbox_item+"' WHERE Date_Time = '"+date+"';";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.Read())
                 {
                     richTextBox_prev_chief_complaint.Text = reader.GetString(1);
-                    // simmilarly for others
+                    richTextBox_prev_diagnosis.Text = reader.GetString(2);
+                    richTextBox_prev_observation.Text = reader.GetString(3);
                 }
                 else
                 {
@@ -298,25 +323,99 @@ namespace Doctor_Window
             {
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
-                string query = "SELECT * FROM Student_Profile WHERE ID = " + curr_listbox_item;
+                string query = "SELECT * FROM Student_Profile WHERE ID = '"+textBox_search.Text+"';";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.Read())
                 {
                     textBox_vpd_fname.Text = reader.GetString(0);
-                    // simmilarly for others
+                    textBox_vpd_mname.Text = reader.GetString(1);
+                    textBox_vpd_lname.Text = reader.GetString(2);
+                    textBox_vpd_dob.Text = reader.GetString(3);
+                    textBox_vpd_education.Text = reader.GetString(4);
+                    textBox_vpd_branch.Text = reader.GetString(5);
+                    textBox_vpd_Y_of_joining.Text = reader.GetString(6);
+                    textBox_vpd_id.Text = reader.GetString(7);
+                    textBox_vpd_gender.Text = reader.GetString(8);
+                    richTextBox_vpd_permanent_add.Text = reader.GetString(10);
+                    richTextBox_vpd_local_add.Text = reader.GetString(11);
+                    textBox_vpd_pts_contact.Text = reader.GetString(12);
+                    textBox_vpd_gud_contact.Text = reader.GetString(13);
+
+                    byte[] imgg = (byte[])(reader["Image"]);
+                    if (imgg == null)
+                    {
+                        pictureBox_vpd_img.Image = null;
+                    }
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream(imgg);
+                        pictureBox_vpd_img.Image = System.Drawing.Image.FromStream(ms);
+                    }
+
                 }
                 else
                 {
                     textBox_vpd_fname.Text = "";
-                    // simmilarly for others
+                    textBox_vpd_mname.Text = "";
+                    textBox_vpd_lname.Text = "";
+                    textBox_vpd_dob.Text = "";
+                    textBox_vpd_education.Text = "";
+                    textBox_vpd_branch.Text ="";
+                    textBox_vpd_Y_of_joining.Text ="";
+                    textBox_vpd_id.Text ="";
+                    textBox_vpd_gender.Text = "";
+                    richTextBox_vpd_permanent_add.Text = "";
+                    richTextBox_vpd_local_add.Text ="";
+                    textBox_vpd_pts_contact.Text ="";
+                    textBox_vpd_gud_contact.Text ="";
+
+                    pictureBox_vpd_img.Image = null;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void listBox_image_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string date = listBox_image.SelectedIndex.ToString();
+            try
+            {
+                SqlConnection conn = new SqlConnection(str);
+                conn.Open();
+                string query = "SELECT * FROM '" + curr_listbox_item + "' WHERE Date_Time = '" + date + "';";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    byte[] imgg = (byte[])(reader["Image"]);
+                    if (imgg == null)
+                    {
+                        pictureBox_img.Image = null;
+                    }
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream(imgg);
+                        pictureBox_img.Image = System.Drawing.Image.FromStream(ms);
+                    }
+                }
+                else
+                {
+                    pictureBox_img.Image = null;
+                    MessageBox.Show("Data not present in the list");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            
         }
     }
 }

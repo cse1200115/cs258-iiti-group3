@@ -1264,6 +1264,7 @@
             this.listBox_image.Name = "listBox_image";
             this.listBox_image.Size = new System.Drawing.Size(128, 134);
             this.listBox_image.TabIndex = 11;
+            this.listBox_image.SelectedIndexChanged += new System.EventHandler(this.listBox_image_SelectedIndexChanged);
             // 
             // richTextBox_comment
             // 

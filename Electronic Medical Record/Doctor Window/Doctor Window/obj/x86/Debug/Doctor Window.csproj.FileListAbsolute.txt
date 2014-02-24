@@ -30,3 +30,5 @@ C:\Users\SONY\Desktop\Visual Studio\Doctor Window\Doctor Window\obj\x86\Debug\Do
 C:\Users\SONY\Desktop\Visual Studio\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.csproj.GenerateResource.Cache
 C:\Users\SONY\Desktop\Visual Studio\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.exe
 C:\Users\SONY\Desktop\Visual Studio\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.pdb
+F:\EMR\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.exe
+F:\EMR\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.pdb
