@@ -301,6 +301,30 @@ namespace Registration
             
         }
 
+        private void addNewUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            newuser_frm frm = new newuser_frm();
+            frm.ShowDialog();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            password frm = new password();
+            frm.ShowDialog();
+        }
+
+        private void changeUsernameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            password frm = new password();
+            frm.ShowDialog();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            newuser_frm frm = new newuser_frm();
+            frm.ShowDialog();
+        }
+
 
 
 
