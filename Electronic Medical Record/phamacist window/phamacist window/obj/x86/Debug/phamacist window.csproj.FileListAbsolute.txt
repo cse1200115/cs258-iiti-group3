@@ -8,4 +8,4 @@ C:\Users\SONY\Desktop\Visual Studio\phamacist window\phamacist window\obj\x86\De
 C:\Users\SONY\Desktop\Visual Studio\phamacist window\phamacist window\obj\x86\Debug\phamacist window.pdb
 C:\Users\SONY\Desktop\Visual Studio\phamacist window\phamacist window\obj\x86\Debug\phamacist_window.password.resources
 C:\Users\SONY\Desktop\Visual Studio\phamacist window\phamacist window\obj\x86\Debug\phamacist_window.userprofile.resources
-C:\Users\SONY\Desktop\Visual Studio\phamacist window\phamacist window\obj\x86\Debug\phamacist window.csprojResolveAssemblyReference.cache
+C:\Users\SONY\Desktop\Visual Studio\phamacist window\phamacist window\obj\x86\Debug\phamacist_window.Stock.resources

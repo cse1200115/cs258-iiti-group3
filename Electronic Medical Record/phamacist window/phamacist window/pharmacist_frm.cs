@@ -36,21 +36,7 @@ namespace phamacist_window
 
         private void button_save_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SqlConnection conn = new SqlConnection(str);
-                conn.Open();
-                string query = "INSERT INTO Medicines(Generic_Name,Brands_Name,Batch_Num,Mfg,Exp,Quantity)VALUES('" + this.textBox_generic.Text + "','" + this.textBox_brands.Text + "','" + this.textBox_batch.Text + "','" + this.dateTimePicker_mfg.Text + "','" + this.dateTimePicker_exp.Text + "','" + this.textBox_quan.Text + "') ";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.ExecuteNonQuery();
-                conn.Close();
-
-                MessageBox.Show("Data Insereted Successfully");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
         }
 
         private void textBox_batch_TextChanged(object sender, EventArgs e)
@@ -65,43 +51,7 @@ namespace phamacist_window
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-
-                string batch = textBox6.Text;
-                SqlConnection conn = new SqlConnection(str);
-                conn.Open();
-                string query = "SELECT *FROM Medicines WHERE Batch_Num = " + textBox6.Text;
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-
-
-
-                if (reader.Read())
-                {
-
-                    textBox_gen.Text = reader.GetString(0);
-                    textBox_brand.Text = reader.GetString(1);
-                    textBox_mfg.Text = reader.GetString(3);
-                    textBox_exp.Text = reader.GetString(4).ToString();
-                    textBoxquan.Text = reader.GetString(5);
-                }
-                else
-                {
-                    textBox_gen.Text ="";
-                    textBox_brand.Text ="";
-                    textBox_mfg.Text ="";
-                    textBox_exp.Text ="";
-                    textBoxquan.Text ="";
-                }
-                
-                conn.Close();
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
         }
         
 
@@ -152,6 +102,12 @@ namespace phamacist_window
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void View_Stock_Click(object sender, EventArgs e)
+        {
+            Stock frm = new Stock();
+            frm.ShowDialog();
         }
     }
 }

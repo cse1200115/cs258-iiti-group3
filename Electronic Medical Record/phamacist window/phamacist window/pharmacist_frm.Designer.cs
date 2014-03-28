@@ -49,51 +49,51 @@
             this.label15 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox_generic = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox_brands = new System.Windows.Forms.TextBox();
-            this.textBox_batch = new System.Windows.Forms.TextBox();
-            this.dateTimePicker_exp = new System.Windows.Forms.DateTimePicker();
-            this.textBox_quan = new System.Windows.Forms.TextBox();
-            this.button_save = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.tabPage_medicine = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.tabControl_pharm = new System.Windows.Forms.TabControl();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.Save = new System.Windows.Forms.PictureBox();
-            this.View_Stock = new System.Windows.Forms.PictureBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Frequency = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button_save = new System.Windows.Forms.Button();
+            this.textBox_quan = new System.Windows.Forms.TextBox();
+            this.dateTimePicker_exp = new System.Windows.Forms.DateTimePicker();
+            this.textBox_batch = new System.Windows.Forms.TextBox();
+            this.textBox_brands = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox_generic = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tabPage_medicine = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Frequency = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabControl_pharm = new System.Windows.Forms.TabControl();
+            this.Save = new System.Windows.Forms.PictureBox();
+            this.View_Stock = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabPage_medicine.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl_pharm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Save)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_Stock)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
@@ -298,86 +298,79 @@
             this.groupBox2.Text = "Medicine Details";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // label7
+            // textBox3
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(71, 50);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Generic Name";
+            this.textBox3.Location = new System.Drawing.Point(175, 318);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(172, 20);
+            this.textBox3.TabIndex = 35;
             // 
-            // label6
+            // textBox2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(71, 155);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 13);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Batch No.";
+            this.textBox2.Location = new System.Drawing.Point(175, 292);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(172, 20);
+            this.textBox2.TabIndex = 34;
             // 
-            // label4
+            // label10
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(71, 193);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Exp. Date";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(71, 295);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(82, 13);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Invoice Number";
             // 
-            // label3
+            // label9
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(71, 265);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Quantity";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(71, 326);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(75, 13);
+            this.label9.TabIndex = 32;
+            this.label9.Text = "Current Stock ";
             // 
-            // textBox_generic
+            // dateTimePicker1
             // 
-            this.textBox_generic.Location = new System.Drawing.Point(175, 50);
-            this.textBox_generic.Name = "textBox_generic";
-            this.textBox_generic.Size = new System.Drawing.Size(172, 20);
-            this.textBox_generic.TabIndex = 19;
+            this.dateTimePicker1.Location = new System.Drawing.Point(175, 226);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(176, 20);
+            this.dateTimePicker1.TabIndex = 31;
             // 
-            // label2
+            // label8
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(71, 118);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 13);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Manufacturer Name";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(71, 226);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(86, 13);
+            this.label8.TabIndex = 30;
+            this.label8.Text = "Purchasing Date";
             // 
-            // textBox_brands
+            // textBox1
             // 
-            this.textBox_brands.Location = new System.Drawing.Point(175, 115);
-            this.textBox_brands.Name = "textBox_brands";
-            this.textBox_brands.Size = new System.Drawing.Size(172, 20);
-            this.textBox_brands.TabIndex = 21;
+            this.textBox1.Location = new System.Drawing.Point(175, 82);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(172, 20);
+            this.textBox1.TabIndex = 29;
             // 
-            // textBox_batch
+            // label5
             // 
-            this.textBox_batch.Location = new System.Drawing.Point(175, 152);
-            this.textBox_batch.Name = "textBox_batch";
-            this.textBox_batch.Size = new System.Drawing.Size(172, 20);
-            this.textBox_batch.TabIndex = 22;
-            this.textBox_batch.TextChanged += new System.EventHandler(this.textBox_batch_TextChanged);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(71, 82);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(31, 13);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "Type";
             // 
-            // dateTimePicker_exp
+            // button4
             // 
-            this.dateTimePicker_exp.Location = new System.Drawing.Point(175, 193);
-            this.dateTimePicker_exp.Name = "dateTimePicker_exp";
-            this.dateTimePicker_exp.Size = new System.Drawing.Size(172, 20);
-            this.dateTimePicker_exp.TabIndex = 24;
-            // 
-            // textBox_quan
-            // 
-            this.textBox_quan.Location = new System.Drawing.Point(175, 262);
-            this.textBox_quan.Name = "textBox_quan";
-            this.textBox_quan.Size = new System.Drawing.Size(172, 20);
-            this.textBox_quan.TabIndex = 25;
+            this.button4.Location = new System.Drawing.Point(276, 369);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 27;
+            this.button4.Text = "Reset";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // button_save
             // 
@@ -389,46 +382,86 @@
             this.button_save.UseVisualStyleBackColor = true;
             this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
-            // button4
+            // textBox_quan
             // 
-            this.button4.Location = new System.Drawing.Point(276, 369);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Reset";
-            this.button4.UseVisualStyleBackColor = true;
+            this.textBox_quan.Location = new System.Drawing.Point(175, 262);
+            this.textBox_quan.Name = "textBox_quan";
+            this.textBox_quan.Size = new System.Drawing.Size(172, 20);
+            this.textBox_quan.TabIndex = 25;
             // 
-            // label5
+            // dateTimePicker_exp
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(71, 82);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 13);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "Type";
+            this.dateTimePicker_exp.Location = new System.Drawing.Point(175, 193);
+            this.dateTimePicker_exp.Name = "dateTimePicker_exp";
+            this.dateTimePicker_exp.Size = new System.Drawing.Size(172, 20);
+            this.dateTimePicker_exp.TabIndex = 24;
             // 
-            // textBox1
+            // textBox_batch
             // 
-            this.textBox1.Location = new System.Drawing.Point(175, 82);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(172, 20);
-            this.textBox1.TabIndex = 29;
+            this.textBox_batch.Location = new System.Drawing.Point(175, 152);
+            this.textBox_batch.Name = "textBox_batch";
+            this.textBox_batch.Size = new System.Drawing.Size(172, 20);
+            this.textBox_batch.TabIndex = 22;
+            this.textBox_batch.TextChanged += new System.EventHandler(this.textBox_batch_TextChanged);
             // 
-            // label8
+            // textBox_brands
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(71, 226);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 13);
-            this.label8.TabIndex = 30;
-            this.label8.Text = "Purchasing Date";
+            this.textBox_brands.Location = new System.Drawing.Point(175, 115);
+            this.textBox_brands.Name = "textBox_brands";
+            this.textBox_brands.Size = new System.Drawing.Size(172, 20);
+            this.textBox_brands.TabIndex = 21;
             // 
-            // dateTimePicker1
+            // label2
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(175, 226);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(176, 20);
-            this.dateTimePicker1.TabIndex = 31;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(71, 118);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 13);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Manufacturer Name";
+            // 
+            // textBox_generic
+            // 
+            this.textBox_generic.Location = new System.Drawing.Point(175, 50);
+            this.textBox_generic.Name = "textBox_generic";
+            this.textBox_generic.Size = new System.Drawing.Size(172, 20);
+            this.textBox_generic.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(71, 265);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Quantity";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(71, 193);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Exp. Date";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(71, 155);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Batch No.";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(71, 50);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 13);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Generic Name";
             // 
             // tabPage_medicine
             // 
@@ -443,116 +476,6 @@
             this.tabPage_medicine.Text = "Medicine";
             this.tabPage_medicine.UseVisualStyleBackColor = true;
             this.tabPage_medicine.Click += new System.EventHandler(this.tabPage_medicine_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column4,
-            this.Frequency});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 52);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(410, 372);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(547, 300);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Print";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // tabControl_pharm
-            // 
-            this.tabControl_pharm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl_pharm.Controls.Add(this.tabPage_medicine);
-            this.tabControl_pharm.Controls.Add(this.tabPage2);
-            this.tabControl_pharm.Location = new System.Drawing.Point(168, 80);
-            this.tabControl_pharm.Name = "tabControl_pharm";
-            this.tabControl_pharm.SelectedIndex = 0;
-            this.tabControl_pharm.Size = new System.Drawing.Size(1022, 496);
-            this.tabControl_pharm.TabIndex = 3;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(71, 326);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 13);
-            this.label9.TabIndex = 32;
-            this.label9.Text = "Current Stock ";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(71, 295);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 13);
-            this.label10.TabIndex = 33;
-            this.label10.Text = "Invoice Number";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(175, 292);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(172, 20);
-            this.textBox2.TabIndex = 34;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(175, 318);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(172, 20);
-            this.textBox3.TabIndex = 35;
-            // 
-            // Save
-            // 
-            this.Save.Location = new System.Drawing.Point(289, 13);
-            this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(117, 61);
-            this.Save.TabIndex = 5;
-            this.Save.TabStop = false;
-            this.Save.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // View_Stock
-            // 
-            this.View_Stock.Location = new System.Drawing.Point(480, 13);
-            this.View_Stock.Name = "View_Stock";
-            this.View_Stock.Size = new System.Drawing.Size(100, 50);
-            this.View_Stock.TabIndex = 6;
-            this.View_Stock.TabStop = false;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Sr.No.";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 40;
-            // 
-            // Column2
-            // 
-            this.Column2.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Column2.HeaderText = "Generic & Type";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Column4.HeaderText = "Quantity";
-            this.Column4.Name = "Column4";
-            // 
-            // Frequency
-            // 
-            this.Frequency.HeaderText = "Frequency";
-            this.Frequency.Name = "Frequency";
             // 
             // dataGridView3
             // 
@@ -593,6 +516,86 @@
             this.dataGridViewTextBoxColumn7.HeaderText = "Issue";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(547, 300);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Print";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column4,
+            this.Frequency});
+            this.dataGridView1.Location = new System.Drawing.Point(16, 52);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(410, 372);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Sr.No.";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 40;
+            // 
+            // Column2
+            // 
+            this.Column2.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Column2.HeaderText = "Generic & Type";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Column4.HeaderText = "Quantity";
+            this.Column4.Name = "Column4";
+            // 
+            // Frequency
+            // 
+            this.Frequency.HeaderText = "Frequency";
+            this.Frequency.Name = "Frequency";
+            // 
+            // tabControl_pharm
+            // 
+            this.tabControl_pharm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl_pharm.Controls.Add(this.tabPage_medicine);
+            this.tabControl_pharm.Controls.Add(this.tabPage2);
+            this.tabControl_pharm.Location = new System.Drawing.Point(168, 80);
+            this.tabControl_pharm.Name = "tabControl_pharm";
+            this.tabControl_pharm.SelectedIndex = 0;
+            this.tabControl_pharm.Size = new System.Drawing.Size(1022, 496);
+            this.tabControl_pharm.TabIndex = 3;
+            // 
+            // Save
+            // 
+            this.Save.Image = ((System.Drawing.Image)(resources.GetObject("Save.Image")));
+            this.Save.Location = new System.Drawing.Point(289, 13);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(66, 61);
+            this.Save.TabIndex = 5;
+            this.Save.TabStop = false;
+            this.Save.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // View_Stock
+            // 
+            this.View_Stock.Image = ((System.Drawing.Image)(resources.GetObject("View_Stock.Image")));
+            this.View_Stock.Location = new System.Drawing.Point(387, 13);
+            this.View_Stock.Name = "View_Stock";
+            this.View_Stock.Size = new System.Drawing.Size(68, 61);
+            this.View_Stock.TabIndex = 6;
+            this.View_Stock.TabStop = false;
+            this.View_Stock.Click += new System.EventHandler(this.View_Stock_Click);
+            // 
             // pharmacist_frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -613,11 +616,11 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabPage_medicine.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabControl_pharm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Save)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_Stock)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

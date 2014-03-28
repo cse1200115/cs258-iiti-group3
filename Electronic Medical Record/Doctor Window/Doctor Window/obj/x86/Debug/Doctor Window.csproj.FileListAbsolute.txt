@@ -32,3 +32,4 @@ C:\Users\SONY\Desktop\Visual Studio\Doctor Window\Doctor Window\obj\x86\Debug\Do
 C:\Users\SONY\Desktop\Visual Studio\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.pdb
 C:\Users\SONY\Desktop\Visual Studio\Doctor Window\Doctor Window\obj\x86\Debug\Doctor_Window.userProfile.resources
 C:\Users\SONY\Desktop\Visual Studio\Doctor Window\Doctor Window\obj\x86\Debug\Doctor_Window.password.resources
+C:\Users\SONY\Desktop\Visual Studio\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.csprojResolveAssemblyReference.cache
