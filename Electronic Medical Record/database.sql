@@ -42,9 +42,9 @@ CREATE TABLE [dbo].[Student_Profile](
 
 	[Local_Address] [varchar](250) NULL,
 
-	[Contact_Num] [int] NOT NULL,
+	[Contact_Num] [varchar](20) NOT NULL,
 
-	[Guar_contact] [int] NOT NULL,
+	[Guar_contact] [varchar](20) NOT NULL,
 
 	[Martial_Status] [varchar](50) NOT NULL,
 
@@ -158,9 +158,9 @@ CREATE TABLE [dbo].[Others_Profile](
 
 	[Local_Address] [varchar](250) NULL,
 
-	[Contact_Num] [int] NOT NULL,
+	[Contact_Num] [varchar](20) NOT NULL,
 
-	[Guar_contact] [int] NOT NULL,
+	[Guar_contact] [varchar](20) NOT NULL,
 
 	[Martial_Status] [varchar](50) NOT NULL,
 
@@ -194,49 +194,6 @@ SET ANSI_PADDING OFF
 
 GO
 
-/****** Object:  Table [dbo].[Medicines]    Script Date: 02/17/2014 23:43:32 ******/
-
-SET ANSI_NULLS ON
-
-GO
-
-SET QUOTED_IDENTIFIER ON
-
-GO
-
-SET ANSI_PADDING ON
-
-GO
-
-CREATE TABLE [dbo].[Medicines](
-
-	[Generic_Name] [varchar](50) NOT NULL,
-
-	[Brands_Name] [varchar](50) NOT NULL,
-
-	[Batch_Num] [varchar](50) NOT NULL,
-
-	[Mfg] [varchar](50) NULL,
-
-	[Exp] [varchar](50) NOT NULL,
-
-	[Quantity] [varchar](50) NOT NULL,
-
- CONSTRAINT [PK_Medicines] PRIMARY KEY CLUSTERED 
-
-(
-
-	[Batch_Num] ASC
-
-)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
-
-) ON [PRIMARY]
-
-GO
-
-SET ANSI_PADDING OFF
-
-GO
 
 /****** Object:  Table [dbo].[Faculty_Profile]    Script Date: 02/17/2014 23:43:32 ******/
 
@@ -278,9 +235,9 @@ CREATE TABLE [dbo].[Faculty_Profile](
 
 	[Local_Address] [varchar](250) NULL,
 
-	[Contact_Num] [int] NOT NULL,
+	[Contact_Num] [varchar](20) NOT NULL,
 
-	[Guar_contact] [int] NOT NULL,
+	[Guar_contact] [varchar](20) NOT NULL,
 
 	[Martial_Status] [varchar](50) NOT NULL,
 
