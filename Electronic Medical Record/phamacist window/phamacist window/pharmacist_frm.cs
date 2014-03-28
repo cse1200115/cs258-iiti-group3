@@ -109,5 +109,29 @@ namespace phamacist_window
         {
             
         }
+
+        private void newUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            userprofile frm = new userprofile();
+            frm.ShowDialog();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            userprofile frm = new userprofile();
+            frm.ShowDialog();
+        }
+
+        private void changeUsernameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            password frm = new password();
+            frm.ShowDialog();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            password frm = new password();
+            frm.ShowDialog();
+        }
     }
 }

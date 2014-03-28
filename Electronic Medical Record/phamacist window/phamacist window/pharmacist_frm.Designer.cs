@@ -75,7 +75,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.newUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.userProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -89,6 +89,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.label1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl_pharm.SuspendLayout();
             this.tabPage_medicine.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -516,7 +517,8 @@
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newUserToolStripMenuItem,
-            this.exitToolStripMenuItem});
+            this.deleteToolStripMenuItem,
+            this.exitToolStripMenuItem1});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
@@ -526,14 +528,16 @@
             // newUserToolStripMenuItem
             // 
             this.newUserToolStripMenuItem.Name = "newUserToolStripMenuItem";
-            this.newUserToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.newUserToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.newUserToolStripMenuItem.Text = "New User";
+            this.newUserToolStripMenuItem.Click += new System.EventHandler(this.newUserToolStripMenuItem_Click);
             // 
-            // exitToolStripMenuItem
+            // deleteToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deleteToolStripMenuItem.Text = "Delete User";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // toolStripDropDownButton2
             // 
@@ -568,14 +572,16 @@
             // changeUsernameToolStripMenuItem
             // 
             this.changeUsernameToolStripMenuItem.Name = "changeUsernameToolStripMenuItem";
-            this.changeUsernameToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.changeUsernameToolStripMenuItem.Text = "Change Username";
+            this.changeUsernameToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.changeUsernameToolStripMenuItem.Text = "Reset Password";
+            this.changeUsernameToolStripMenuItem.Click += new System.EventHandler(this.changeUsernameToolStripMenuItem_Click);
             // 
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // toolStripDropDownButton4
             // 
@@ -650,6 +656,12 @@
             this.label15.TabIndex = 4;
             this.label15.Text = "Welcome : User";
             // 
+            // exitToolStripMenuItem1
+            // 
+            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem1.Text = "Exit";
+            // 
             // pharmacist_frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -686,7 +698,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem newUserToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
         private System.Windows.Forms.ToolStripMenuItem userProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
@@ -740,5 +752,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox_exp;
         private System.Windows.Forms.TextBox textBox_mfg;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
     }
 }

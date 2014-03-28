@@ -417,5 +417,29 @@ namespace Doctor_Window
 
             
         }
+
+        private void newUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            userProfile frm = new userProfile();
+            frm.ShowDialog();
+        }
+
+        private void deleteUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            userProfile frm = new userProfile();
+            frm.ShowDialog();
+        }
+
+        private void changeUsernameToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            password frm = new password();
+            frm.ShowDialog();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            password frm = new password();
+            frm.ShowDialog();
+        }
     }
 }

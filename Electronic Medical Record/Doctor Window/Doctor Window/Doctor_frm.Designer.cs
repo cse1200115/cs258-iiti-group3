@@ -194,6 +194,7 @@
             this.refresh_btn = new System.Windows.Forms.PictureBox();
             this.Cancel_btn = new System.Windows.Forms.PictureBox();
             this.view_chart_btn = new System.Windows.Forms.PictureBox();
+            this.deleteUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -247,7 +248,8 @@
             // 
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newUserToolStripMenuItem});
+            this.newUserToolStripMenuItem,
+            this.deleteUserToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
@@ -257,8 +259,9 @@
             // newUserToolStripMenuItem
             // 
             this.newUserToolStripMenuItem.Name = "newUserToolStripMenuItem";
-            this.newUserToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.newUserToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.newUserToolStripMenuItem.Text = "New user";
+            this.newUserToolStripMenuItem.Click += new System.EventHandler(this.newUserToolStripMenuItem_Click);
             // 
             // toolStripDropDownButton2
             // 
@@ -292,14 +295,16 @@
             // changeUsernameToolStripMenuItem
             // 
             this.changeUsernameToolStripMenuItem.Name = "changeUsernameToolStripMenuItem";
-            this.changeUsernameToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.changeUsernameToolStripMenuItem.Text = "Change Username";
+            this.changeUsernameToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.changeUsernameToolStripMenuItem.Text = "Reset Password";
+            this.changeUsernameToolStripMenuItem.Click += new System.EventHandler(this.changeUsernameToolStripMenuItem_Click_1);
             // 
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // toolStripDropDownButton4
             // 
@@ -1804,6 +1809,13 @@
             this.view_chart_btn.TabIndex = 19;
             this.view_chart_btn.TabStop = false;
             // 
+            // deleteUserToolStripMenuItem
+            // 
+            this.deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
+            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deleteUserToolStripMenuItem.Text = "Delete User";
+            this.deleteUserToolStripMenuItem.Click += new System.EventHandler(this.deleteUserToolStripMenuItem_Click);
+            // 
             // Doctor_frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2036,5 +2048,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.ToolStripMenuItem deleteUserToolStripMenuItem;
     }
 }
