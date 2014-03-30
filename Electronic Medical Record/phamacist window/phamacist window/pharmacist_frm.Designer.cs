@@ -50,19 +50,19 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_invoice = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_type = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button_save = new System.Windows.Forms.Button();
             this.textBox_quan = new System.Windows.Forms.TextBox();
             this.dateTimePicker_exp = new System.Windows.Forms.DateTimePicker();
             this.textBox_batch = new System.Windows.Forms.TextBox();
-            this.textBox_brands = new System.Windows.Forms.TextBox();
+            this.textBox_manufact = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_generic = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -271,19 +271,19 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.textBox_invoice);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.textBox_type);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.button_save);
             this.groupBox2.Controls.Add(this.textBox_quan);
             this.groupBox2.Controls.Add(this.dateTimePicker_exp);
             this.groupBox2.Controls.Add(this.textBox_batch);
-            this.groupBox2.Controls.Add(this.textBox_brands);
+            this.groupBox2.Controls.Add(this.textBox_manufact);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.textBox_generic);
             this.groupBox2.Controls.Add(this.label3);
@@ -306,12 +306,12 @@
             this.textBox3.Size = new System.Drawing.Size(172, 20);
             this.textBox3.TabIndex = 35;
             // 
-            // textBox2
+            // textBox_invoice
             // 
-            this.textBox2.Location = new System.Drawing.Point(175, 292);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(172, 20);
-            this.textBox2.TabIndex = 34;
+            this.textBox_invoice.Location = new System.Drawing.Point(175, 292);
+            this.textBox_invoice.Name = "textBox_invoice";
+            this.textBox_invoice.Size = new System.Drawing.Size(172, 20);
+            this.textBox_invoice.TabIndex = 34;
             // 
             // label10
             // 
@@ -347,12 +347,12 @@
             this.label8.TabIndex = 30;
             this.label8.Text = "Purchasing Date";
             // 
-            // textBox1
+            // textBox_type
             // 
-            this.textBox1.Location = new System.Drawing.Point(175, 82);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(172, 20);
-            this.textBox1.TabIndex = 29;
+            this.textBox_type.Location = new System.Drawing.Point(175, 82);
+            this.textBox_type.Name = "textBox_type";
+            this.textBox_type.Size = new System.Drawing.Size(172, 20);
+            this.textBox_type.TabIndex = 29;
             // 
             // label5
             // 
@@ -404,12 +404,12 @@
             this.textBox_batch.TabIndex = 22;
             this.textBox_batch.TextChanged += new System.EventHandler(this.textBox_batch_TextChanged);
             // 
-            // textBox_brands
+            // textBox_manufact
             // 
-            this.textBox_brands.Location = new System.Drawing.Point(175, 115);
-            this.textBox_brands.Name = "textBox_brands";
-            this.textBox_brands.Size = new System.Drawing.Size(172, 20);
-            this.textBox_brands.TabIndex = 21;
+            this.textBox_manufact.Location = new System.Drawing.Point(175, 115);
+            this.textBox_manufact.Name = "textBox_manufact";
+            this.textBox_manufact.Size = new System.Drawing.Size(172, 20);
+            this.textBox_manufact.TabIndex = 21;
             // 
             // label2
             // 
@@ -649,19 +649,19 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_invoice;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_type;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button_save;
         private System.Windows.Forms.TextBox textBox_quan;
         private System.Windows.Forms.DateTimePicker dateTimePicker_exp;
         private System.Windows.Forms.TextBox textBox_batch;
-        private System.Windows.Forms.TextBox textBox_brands;
+        private System.Windows.Forms.TextBox textBox_manufact;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_generic;
         private System.Windows.Forms.Label label3;
