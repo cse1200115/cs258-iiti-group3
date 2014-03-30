@@ -100,6 +100,27 @@ namespace Registration
 
         private void btn_save_Click(object sender, EventArgs e)
         {
+
+            if (textBox_fname.Text == "")
+                MessageBox.Show("please enter first name");
+            if (textBox_lname.Text== "")
+                MessageBox.Show("please enter last name");
+            if (dateTimePicker_dob.ToString() == "")
+                MessageBox.Show("please enter Date of birth");
+            if (textBox_branch.Text == "")
+                MessageBox.Show("please enter Branch");
+            if (dateTimePicker_Y_of_joining.Text == "")
+                MessageBox.Show("please enter year of joining");
+            if(textBox_id.Text=="")
+                MessageBox.Show("please enter your ID");
+            if (richTextBox_corres_add.Text=="")
+                MessageBox.Show("please enter your correspondence address.");
+            if (richTextBox_perm_add.Text=="")
+                MessageBox.Show("please enter your permanent address.");
+            if(richTextBox_local_guad_Add.Text=="")
+                MessageBox.Show("please enter your local Gaurdian address.");
+            
+
             try
             {
                 //convert image to binary code-
@@ -111,7 +132,7 @@ namespace Registration
 
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
-                string query = "INSERT INTO Student_Profile(First_Name,Middle_Name,Last_Name,DOB,Education,Branch,Year_Of_Joining,ID,Gender,Corres_Address,Perm_Address,Local_Address,Contact_num,Guar_contact,Martial_Status,Blood_group,Insurance_num,Image)VALUES('" + this.textBox_fname.Text + "','" + this.textBox_mname.Text+ "','" + this.textBox_lname.Text+ "','"+this.dateTimePicker_dob.Text+"','"+education+"','"+this.textBox_branch.Text+"','"+this.dateTimePicker_Y_of_joining.Text+"','"+this.textBox_id.Text+"','"+gender+"','"+this.richTextBox_corres_add.Text+"','"+this.richTextBox_perm_add.Text+"','"+this.richTextBox_local_guad_Add.Text+"','"+this.textBox_contact.Text+"','"+this.textBox_guad_contact.Text+"','"+Martial_status+"','"+this.comboBox_blood.Text+"','"+this.textBox_ins_no.Text+"',@IMG)";
+                string query = "INSERT INTO Student(First_Name,Middle_Name,Last_Name,DOB,Education,Branch,Year_Of_Joining,ID,Email_id,Gender,Corres_Address,Perm_Address,Local_Address,Contact_num,Guar_contact,Martial_Status,Blood_group,Insurance_num,Image)VALUES('" + this.textBox_fname.Text + "','" + this.textBox_mname.Text+ "','" + this.textBox_lname.Text+ "','"+this.dateTimePicker_dob.Text+"','"+education+"','"+this.textBox_branch.Text+"','"+this.dateTimePicker_Y_of_joining.Text+"','"+this.textBox_id.Text+"','"+textBox_email.Text+"','"+gender+"','"+this.richTextBox_corres_add.Text+"','"+this.richTextBox_perm_add.Text+"','"+this.richTextBox_local_guad_Add.Text+"','"+this.textBox_contact.Text+"','"+this.textBox_guad_contact.Text+"','"+Martial_status+"','"+this.comboBox_blood.Text+"','"+this.textBox_ins_no.Text+"',@IMG)";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.Add(new SqlParameter("@IMG",img));
                 cmd.ExecuteNonQuery();
@@ -323,6 +344,11 @@ namespace Registration
         {
             newuser_frm frm = new newuser_frm();
             frm.ShowDialog();
+        }
+
+        private void textBox_ins_no_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
 

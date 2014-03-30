@@ -33,6 +33,7 @@
             this.toolStripDropDown_file = new System.Windows.Forms.ToolStripDropDownButton();
             this.addNewUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDown_edit = new System.Windows.Forms.ToolStripDropDownButton();
             this.userProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -59,6 +60,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Add_up_del_pt = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox_email = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
             this.radioButton_other = new System.Windows.Forms.RadioButton();
             this.groupBox_eduaction = new System.Windows.Forms.GroupBox();
             this.radioBtn_btech = new System.Windows.Forms.RadioButton();
@@ -156,7 +159,6 @@
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.quitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.File.SuspendLayout();
             this.tabControl_reg.SuspendLayout();
             this.Reg_pt.SuspendLayout();
@@ -212,6 +214,12 @@
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.deleteToolStripMenuItem.Text = "Delete Existing User";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // quitToolStripMenuItem1
+            // 
+            this.quitToolStripMenuItem1.Name = "quitToolStripMenuItem1";
+            this.quitToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
+            this.quitToolStripMenuItem1.Text = "Quit";
             // 
             // toolStripDropDown_edit
             // 
@@ -452,6 +460,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.textBox_email);
+            this.groupBox2.Controls.Add(this.label36);
             this.groupBox2.Controls.Add(this.radioButton_other);
             this.groupBox2.Controls.Add(this.groupBox_eduaction);
             this.groupBox2.Controls.Add(this.radioButton_faculty);
@@ -494,12 +504,28 @@
             this.groupBox2.Controls.Add(this.label24);
             this.groupBox2.Controls.Add(this.label25);
             this.groupBox2.Controls.Add(this.label26);
-            this.groupBox2.Location = new System.Drawing.Point(24, 6);
+            this.groupBox2.Location = new System.Drawing.Point(24, 19);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(556, 761);
+            this.groupBox2.Size = new System.Drawing.Size(556, 750);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Patient\'s Detail";
+            // 
+            // textBox_email
+            // 
+            this.textBox_email.Location = new System.Drawing.Point(128, 575);
+            this.textBox_email.Name = "textBox_email";
+            this.textBox_email.Size = new System.Drawing.Size(137, 20);
+            this.textBox_email.TabIndex = 101;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(20, 582);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(46, 13);
+            this.label36.TabIndex = 100;
+            this.label36.Text = "Email ID";
             // 
             // radioButton_other
             // 
@@ -677,10 +703,11 @@
             // 
             // textBox_ins_no
             // 
-            this.textBox_ins_no.Location = new System.Drawing.Point(139, 666);
+            this.textBox_ins_no.Location = new System.Drawing.Point(139, 683);
             this.textBox_ins_no.Name = "textBox_ins_no";
             this.textBox_ins_no.Size = new System.Drawing.Size(411, 20);
             this.textBox_ins_no.TabIndex = 90;
+            this.textBox_ins_no.TextChanged += new System.EventHandler(this.textBox_ins_no_TextChanged);
             // 
             // comboBox_blood
             // 
@@ -702,7 +729,7 @@
             // 
             // button_clear
             // 
-            this.button_clear.Location = new System.Drawing.Point(356, 709);
+            this.button_clear.Location = new System.Drawing.Point(356, 719);
             this.button_clear.Name = "button_clear";
             this.button_clear.Size = new System.Drawing.Size(75, 23);
             this.button_clear.TabIndex = 86;
@@ -711,7 +738,7 @@
             // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(179, 709);
+            this.btn_save.Location = new System.Drawing.Point(179, 719);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(75, 23);
             this.btn_save.TabIndex = 85;
@@ -722,7 +749,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(29, 666);
+            this.label8.Location = new System.Drawing.Point(30, 683);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(77, 13);
             this.label8.TabIndex = 84;
@@ -786,7 +813,7 @@
             // 
             // textBox_id
             // 
-            this.textBox_id.Location = new System.Drawing.Point(129, 273);
+            this.textBox_id.Location = new System.Drawing.Point(129, 276);
             this.textBox_id.Name = "textBox_id";
             this.textBox_id.Size = new System.Drawing.Size(200, 20);
             this.textBox_id.TabIndex = 73;
@@ -1430,12 +1457,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Welcome : User";
             // 
-            // quitToolStripMenuItem1
-            // 
-            this.quitToolStripMenuItem1.Name = "quitToolStripMenuItem1";
-            this.quitToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
-            this.quitToolStripMenuItem1.Text = "Quit";
-            // 
             // Reception_frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1605,6 +1626,8 @@
         private System.Windows.Forms.TextBox textBox_vpd_blood;
         private System.Windows.Forms.TextBox textBox_vpd_martial;
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem1;
+        private System.Windows.Forms.TextBox textBox_email;
+        private System.Windows.Forms.Label label36;
 
     }
 }

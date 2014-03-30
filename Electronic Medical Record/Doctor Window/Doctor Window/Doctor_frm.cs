@@ -228,7 +228,7 @@ namespace Doctor_Window
 
             try
             {
-                string query = "SELECT * FROM Student_Profile WHERE ID='"+curr_listbox_item+"';";
+                string query = "SELECT * FROM Student WHERE ID='"+curr_listbox_item+"';";
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -238,19 +238,20 @@ namespace Doctor_Window
                 {
                     textBox_fname.Text = reader.GetString(0);
                     textBox_mname.Text = reader.GetString(1);
-                    textBox_lname.Text = reader.GetString(2);
+                    textBox_lname.Text = reader.GetString(2); 
                     textBox5_dob.Text = reader.GetString(3);
                     textBox_education.Text = reader.GetString(4);
                     textBox_branch.Text = reader.GetString(5);
                     textBox_Y_of_joining.Text = reader.GetString(6);
                     textBox_roll_no.Text = reader.GetString(7);
-                    textBox_gender.Text = reader.GetString(8);
-                    richTextBox_permanent_Add.Text = reader.GetString(10);
-                    richTextBox_local_add.Text = reader.GetString(11);
-                    textBox_pt_record.Text = reader.GetString(12);
-                    textBox_gud_contact.Text = reader.GetString(13);
-                    textBox_martial_status.Text=reader.GetString(14);
-                    textBox_blood.Text = reader.GetString(15);
+                    textBox_emailid.Text = reader.GetString(8);
+                    textBox_gender.Text = reader.GetString(9);
+                    richTextBox_permanent_Add.Text = reader.GetString(11);
+                    richTextBox_local_add.Text = reader.GetString(12);
+                    textBox_pt_record.Text = reader.GetString(13); 
+                    textBox_gud_contact.Text = reader.GetString(14);
+                    textBox_martial_status.Text=reader.GetString(15);
+                    textBox_blood.Text = reader.GetString(16);
 
                     byte[] imgg = (byte[])(reader["Image"]);
                     if (imgg == null)
@@ -323,7 +324,7 @@ namespace Doctor_Window
             {
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
-                string query = "SELECT * FROM Student_Profile WHERE ID = '"+textBox_search.Text+"';";
+                string query = "SELECT * FROM Student WHERE ID = '"+textBox_search.Text+"';";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 

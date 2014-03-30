@@ -57,5 +57,10 @@ namespace Registration
 
             
         }
+
+        private void psd_button1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
