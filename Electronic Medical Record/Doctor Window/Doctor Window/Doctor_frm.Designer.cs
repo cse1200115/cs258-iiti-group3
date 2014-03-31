@@ -90,10 +90,8 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataGridView_previous = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.richTextBox_prev_diagnosis = new System.Windows.Forms.RichTextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -105,6 +103,7 @@
             this.listBox_prevvisits = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.dataGridView_new_visit = new System.Windows.Forms.DataGridView();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.new_img_up_btn = new System.Windows.Forms.Button();
             this.pictureBox_new_visit = new System.Windows.Forms.PictureBox();
@@ -188,10 +187,8 @@
             this.refresh_btn = new System.Windows.Forms.PictureBox();
             this.Cancel_btn = new System.Windows.Forms.PictureBox();
             this.view_chart_btn = new System.Windows.Forms.PictureBox();
-            this.dataGridView_new_visit = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Frequency = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CurrentStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
@@ -206,6 +203,7 @@
             this.groupBox3.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_new_visit)).BeginInit();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_new_visit)).BeginInit();
             this.tabPage4.SuspendLayout();
@@ -226,7 +224,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.refresh_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cancel_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.view_chart_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_new_visit)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -458,6 +455,7 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "                         Genral                        ";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // textBox_martial_status
             // 
@@ -777,6 +775,7 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "                   Previous Visits                  ";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // groupBox5
             // 
@@ -799,10 +798,8 @@
             this.dataGridView_previous.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_previous.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column2,
             this.Column3,
-            this.Column4,
-            this.Column5});
+            this.Column4});
             this.dataGridView_previous.Location = new System.Drawing.Point(25, 19);
             this.dataGridView_previous.Name = "dataGridView_previous";
             this.dataGridView_previous.Size = new System.Drawing.Size(719, 146);
@@ -810,15 +807,9 @@
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Generic Name";
+            this.Column1.HeaderText = "Generic Name and Type";
             this.Column1.Name = "Column1";
-            this.Column1.Width = 140;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Brand Name";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 140;
+            this.Column1.Width = 300;
             // 
             // Column3
             // 
@@ -831,12 +822,6 @@
             this.Column4.HeaderText = "Frequency";
             this.Column4.Name = "Column4";
             this.Column4.Width = 130;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Days";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 130;
             // 
             // groupBox4
             // 
@@ -953,6 +938,19 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Medicines";
             // 
+            // dataGridView_new_visit
+            // 
+            this.dataGridView_new_visit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_new_visit.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewComboBoxColumn1,
+            this.dataGridViewComboBoxColumn2,
+            this.Frequency,
+            this.CurrentStock});
+            this.dataGridView_new_visit.Location = new System.Drawing.Point(42, 26);
+            this.dataGridView_new_visit.Name = "dataGridView_new_visit";
+            this.dataGridView_new_visit.Size = new System.Drawing.Size(835, 163);
+            this.dataGridView_new_visit.TabIndex = 1;
+            // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.new_img_up_btn);
@@ -1057,6 +1055,8 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "                 Allergy/History              ";
             this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
+            this.tabPage4.Leave += new System.EventHandler(this.tabPage4_Leave);
             // 
             // richTextBox_rich_history
             // 
@@ -1761,38 +1761,20 @@
             this.view_chart_btn.TabIndex = 19;
             this.view_chart_btn.TabStop = false;
             // 
-            // dataGridView_new_visit
-            // 
-            this.dataGridView_new_visit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_new_visit.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewComboBoxColumn1,
-            this.dataGridViewComboBoxColumn2,
-            this.Frequency,
-            this.CurrentStock});
-            this.dataGridView_new_visit.Location = new System.Drawing.Point(42, 26);
-            this.dataGridView_new_visit.Name = "dataGridView_new_visit";
-            this.dataGridView_new_visit.Size = new System.Drawing.Size(835, 163);
-            this.dataGridView_new_visit.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Sr.No.";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 40;
-            // 
             // dataGridViewComboBoxColumn1
             // 
-            this.dataGridViewComboBoxColumn1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.dataGridViewComboBoxColumn1.HeaderText = "Generic & Type";
             this.dataGridViewComboBoxColumn1.Name = "dataGridViewComboBoxColumn1";
+            this.dataGridViewComboBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewComboBoxColumn1.Width = 250;
             // 
             // dataGridViewComboBoxColumn2
             // 
-            this.dataGridViewComboBoxColumn2.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.dataGridViewComboBoxColumn2.HeaderText = "Quantity";
             this.dataGridViewComboBoxColumn2.Name = "dataGridViewComboBoxColumn2";
+            this.dataGridViewComboBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewComboBoxColumn2.Width = 150;
             // 
             // Frequency
@@ -1842,6 +1824,7 @@
             this.groupBox3.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_new_visit)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_new_visit)).EndInit();
@@ -1866,7 +1849,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.refresh_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cancel_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.view_chart_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_new_visit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2027,16 +2009,13 @@
         private System.Windows.Forms.PictureBox refresh_btn;
         private System.Windows.Forms.PictureBox Cancel_btn;
         private System.Windows.Forms.PictureBox view_chart_btn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.ToolStripMenuItem deleteUserToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView_new_visit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Frequency;
         private System.Windows.Forms.DataGridViewTextBoxColumn CurrentStock;
     }

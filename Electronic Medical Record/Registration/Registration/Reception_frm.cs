@@ -137,7 +137,7 @@ namespace Registration
                 cmd.Parameters.Add(new SqlParameter("@IMG",img));
                 cmd.ExecuteNonQuery();
 
-                string tab = "CREATE TABLE " + textBox_id.Text + "(Date_Time varchar(50),Chief_Complaint varchar(250),Diagnosis varchar(250),Observation varchar(250),Image_docs image,Generic_Name varchar(200),Brands_Name varchar(200),Doses varchar(200),Frequency varchar(200),Days varchar(200),Exp varchar(200))";
+                string tab = "CREATE TABLE " + textBox_id.Text + "(Date_Time varchar(50),Chief_Complaint varchar(250),Diagnosis varchar(250),Observation varchar(250),Image_docs image,Generic_Name varchar(200),Doses varchar(200),Frequency varchar(200))";
                 SqlCommand tcmd = new SqlCommand(tab,conn);
                 tcmd.ExecuteNonQuery();
                 conn.Close();
