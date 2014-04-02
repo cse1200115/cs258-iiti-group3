@@ -16,9 +16,35 @@ namespace phamacist_window
         public pharmacist_frm()
         {
             InitializeComponent();
+            queue();
+        }
+        string curr_listbox_item = "";
+        string tab="";
+        string str="Data Source=VAIO\\SQLEXPRESS;Initial Catalog=Medical_Records;Integrated Security=True";
+
+        private void queue()
+        {
+            try
+            {
+                SqlConnection conn = new SqlConnection(str);
+                conn.Open();
+                string query = "SELECT * FROM Pt_entry_per_day";
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string id = reader.GetString(0);
+                    listBox1.Items.Add(id);
+                }
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
-        string str="Data Source=VAIO\\SQLEXPRESS;Initial Catalog=Medical_Records;Integrated Security=True";
         private void toolStripDropDownButton2_Click(object sender, EventArgs e)
         {
 
@@ -31,7 +57,7 @@ namespace phamacist_window
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void button_save_Click(object sender, EventArgs e)
@@ -165,13 +191,129 @@ namespace phamacist_window
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                for (int i = 0; i < dataGridView3.Rows.Count; i++)
+                {
 
+                    if (dataGridView3[dataGridView3.Columns.Count - 1, i].Value != null)
+                    {
+                        int x=(Int32)dataGridView3[dataGridView3.Columns.Count - 2, i].Value - (Int32)dataGridView3[dataGridView3.Columns.Count - 1, i].Value;
+                        if (x >= 0)
+                        {
+                            string str = "Data Source=VAIO\\SQLEXPRESS;Initial Catalog=Medicines;Integrated Security=True";
+                            SqlConnection conn = new SqlConnection(str);
+                            conn.Open();
+                            string query = "UPDATE" + tab + "SET quantity=" + x.ToString() + "WHERE batchnum=" + dataGridView3[1, i].Value.ToString() + "";
+                            SqlCommand cmd = new SqlCommand(query,conn);
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Out of Stock");
+                        }
+
+                        
+                    }
+                    
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void View_Stock_Click(object sender, EventArgs e)
         {
             Stock frm = new Stock();
             frm.ShowDialog();
+                
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            curr_listbox_item = listBox1.SelectedItem.ToString();
+             try
+            {
+                SqlConnection conn = new SqlConnection(str);
+                conn.Open();
+                string query = "SELECT TOP 1* FROM "+curr_listbox_item+" ORDER BY Date_Time ASC";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                
+                dataGridView1.DataSource = null;
+                dataGridView1.Rows.Clear();
+                dataGridView1.Refresh();
+
+                while(reader.Read())
+                {
+                   
+                   string[] med = reader.GetString(5).Split(',');
+                   string[] dos = reader.GetString(6).Split(',');
+                   string[] freq = reader.GetString(7).Split(',');
+                   for (int i = 0; i < med.Length-1; i++)
+                       dataGridView1.Rows.Add((i+1).ToString(),med[i], dos[i], freq[i]);
+                }
+            
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                tab = textBox1.Text;
+                dataGridView3.Rows.Clear();
+
+                string str = "Data Source=VAIO\\SQLEXPRESS;Initial Catalog=Medicines;Integrated Security=True";
+                SqlConnection conn = new SqlConnection(str);
+                conn.Open();
+
+                string query = "SELECT * FROM INFORMATION_SCHEMA.tables";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+               
+                while (reader.Read())
+                {
+                    if (reader.GetString(2) == tab)
+                    {
+                        SqlConnection tabcon = new SqlConnection(str);
+                        tabcon.Open();
+                        string tabquery = "SELECT * FROM " + tab + "";
+                        SqlCommand tabcmd = new SqlCommand(tabquery, tabcon);
+                        SqlDataReader tabreader = tabcmd.ExecuteReader();
+                        
+                        
+                        while (tabreader.Read())
+                        {
+
+                            dataGridView3.Rows.Add(tabreader.GetString(0), tabreader.GetString(1), tabreader.GetString(2),tabreader.GetInt32(4).ToString());
+                        }
+                        break;
+                    }
+                }
+                reader.Close();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
+

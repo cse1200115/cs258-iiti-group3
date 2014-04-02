@@ -10,4 +10,3 @@ C:\Users\SONY\Desktop\Visual Studio\Registration\Registration\obj\x86\Debug\Regi
 C:\Users\SONY\Desktop\Visual Studio\Registration\Registration\obj\x86\Debug\Registration.csproj.GenerateResource.Cache
 C:\Users\SONY\Desktop\Visual Studio\Registration\Registration\obj\x86\Debug\Registration.exe
 C:\Users\SONY\Desktop\Visual Studio\Registration\Registration\obj\x86\Debug\Registration.pdb
-C:\Users\SONY\Desktop\Visual Studio\Registration\Registration\obj\x86\Debug\Registration.csprojResolveAssemblyReference.cache

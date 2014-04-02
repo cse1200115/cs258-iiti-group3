@@ -37,7 +37,6 @@
             this.Exp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Invoice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CurrentStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,12 +51,12 @@
             this.Purchase,
             this.Exp,
             this.Invoice,
-            this.CurrentStock,
-            this.btn});
+            this.CurrentStock});
             this.dataGridView2.Location = new System.Drawing.Point(23, 23);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(944, 420);
+            this.dataGridView2.Size = new System.Drawing.Size(845, 420);
             this.dataGridView2.TabIndex = 1;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // Generic_Name
             // 
@@ -99,11 +98,6 @@
             this.CurrentStock.HeaderText = "CurrentStock";
             this.CurrentStock.Name = "CurrentStock";
             // 
-            // btn
-            // 
-            this.btn.HeaderText = "Issue";
-            this.btn.Name = "btn";
-            // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -128,6 +122,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Exp;
         private System.Windows.Forms.DataGridViewTextBoxColumn Invoice;
         private System.Windows.Forms.DataGridViewTextBoxColumn CurrentStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn btn;
     }
 }

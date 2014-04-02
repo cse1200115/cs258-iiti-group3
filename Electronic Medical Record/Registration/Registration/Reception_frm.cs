@@ -248,30 +248,45 @@ namespace Registration
 
         private void textBox15_TextChanged(object sender, EventArgs e)
         {
-           
-        }
-
-        private void textBox_vpd_id_TextChanged(object sender, EventArgs e)
-        {
             try
             {
-                string s = "cse1200115";
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
-                string query = "SELECT * FROM Student_Profile WHERE ID='" +textBox_vpd_id.Text+ "';";
+                string query = "SELECT * FROM Student WHERE ID='" + textBox15.Text + "'";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
+                
+                textBox_vpd_fname.Clear();
+                textBox_vpd_mname.Clear();
+                textBox_lname.Clear();
+                textBox_vpd_dob.Clear();
+                textBox_vpd_edu.Clear();
+                textBox_vpd_branch.Clear();
+                textBox_vpd_year_of_join.Clear();
+                textBox_vpd_gender.Clear();
+                richTextBox_vpd_corres_add.Clear();
+                richTextBox_vpd_perm_add.Clear();
+                richTextBox_vpd_local_add.Clear();
+                textBox_vpd_contact.Clear();
+                textBox_vpd_guad_contact.Clear();
+                textBox_vpd_martial.Clear();
+                textBox_vpd_blood.Clear();
+                textBox_vpd_id.Clear();
+                textBox_vpd_insurance.Clear();
+                textBox_vpd_lname.Clear();
+                pictureBox_vpd.Image = null;
 
                 if (reader.Read())
                 {
-
+                   
                     textBox_vpd_fname.Text = reader.GetString(0);
                     textBox_vpd_mname.Text = reader.GetString(1);
-                    textBox_lname.Text = reader.GetString(2);
+                    textBox_vpd_lname.Text = reader.GetString(2);
                     textBox_vpd_dob.Text = reader.GetString(3);
                     textBox_vpd_edu.Text = reader.GetString(4);
                     textBox_vpd_branch.Text = reader.GetString(5);
                     textBox_vpd_year_of_join.Text = reader.GetString(6);
+                    textBox_vpd_id.Text = reader.GetString(7);
                     textBox_vpd_gender.Text = reader.GetString(8);
                     richTextBox_vpd_corres_add.Text = reader.GetString(9);
                     richTextBox_vpd_perm_add.Text = reader.GetString(10);
@@ -294,31 +309,17 @@ namespace Registration
                     }
 
                 }
-                else
-                {
-                    textBox_vpd_fname.Text = "";
-                    textBox_vpd_mname.Text = "";
-                    textBox_lname.Text = "";
-                    textBox_vpd_dob.Text = "";
-                    textBox_vpd_edu.Text = "";
-                    textBox_vpd_branch.Text = "";
-                    textBox_vpd_year_of_join.Text = "";
-                    textBox_vpd_gender.Text = "";
-                    richTextBox_vpd_corres_add.Text = "";
-                    richTextBox_vpd_perm_add.Text = "";
-                    richTextBox_vpd_local_add.Text = "";
-                    textBox_vpd_contact.Text = "";
-                    textBox_vpd_guad_contact.Text = "";
-                    textBox_vpd_martial.Text = "";
-                    textBox_vpd_blood.Text = "";
-                    textBox_vpd_insurance.Text = "";
-                    pictureBox_vpd.Image = null;
-                }
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void textBox_vpd_id_TextChanged(object sender, EventArgs e)
+        {
+            
             
         }
 

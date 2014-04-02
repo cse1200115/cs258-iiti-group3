@@ -1315,9 +1315,9 @@
             // 
             // pictureBox_vpd
             // 
-            this.pictureBox_vpd.Location = new System.Drawing.Point(385, 55);
+            this.pictureBox_vpd.Location = new System.Drawing.Point(369, 55);
             this.pictureBox_vpd.Name = "pictureBox_vpd";
-            this.pictureBox_vpd.Size = new System.Drawing.Size(155, 149);
+            this.pictureBox_vpd.Size = new System.Drawing.Size(191, 208);
             this.pictureBox_vpd.TabIndex = 59;
             this.pictureBox_vpd.TabStop = false;
             // 
