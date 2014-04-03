@@ -28,7 +28,7 @@ namespace phamacist_window
             {
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
-                string query = "SELECT * FROM Pt_entry_per_day";
+                string query = "SELECT * FROM Pt_transfered_to_pharmacist";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -186,7 +186,7 @@ namespace phamacist_window
 
         private void tabPage_medicine_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -198,26 +198,33 @@ namespace phamacist_window
 
                     if (dataGridView3[dataGridView3.Columns.Count - 1, i].Value != null)
                     {
-                        int x=(Int32)dataGridView3[dataGridView3.Columns.Count - 2, i].Value - (Int32)dataGridView3[dataGridView3.Columns.Count - 1, i].Value;
+                        
+                        long x =Convert.ToInt64(dataGridView3[dataGridView3.Columns.Count - 2, i].Value) - Convert.ToInt64(dataGridView3[dataGridView3.Columns.Count - 1, i].Value);
+                       
                         if (x >= 0)
                         {
+                            
                             string str = "Data Source=VAIO\\SQLEXPRESS;Initial Catalog=Medicines;Integrated Security=True";
                             SqlConnection conn = new SqlConnection(str);
                             conn.Open();
-                            string query = "UPDATE" + tab + "SET quantity=" + x.ToString() + "WHERE batchnum=" + dataGridView3[1, i].Value.ToString() + "";
+                            string query = "UPDATE " + tab + " SET quantity= " + x.ToString() + " WHERE batchnum= " + dataGridView3[1, i].Value.ToString() + "";
                             SqlCommand cmd = new SqlCommand(query,conn);
                             cmd.ExecuteNonQuery();
                             conn.Close();
+                            MessageBox.Show("Item issued");
+                            break;
                         }
                         else
                         {
                             MessageBox.Show("Out of Stock");
                         }
 
-                        
+                     
                     }
                     
+                    
                 }
+                IssueMedicine();
             }
 
             catch (Exception ex)
@@ -271,8 +278,7 @@ namespace phamacist_window
         {
             
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        void IssueMedicine()
         {
             try
             {
@@ -286,7 +292,7 @@ namespace phamacist_window
                 string query = "SELECT * FROM INFORMATION_SCHEMA.tables";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
-               
+
                 while (reader.Read())
                 {
                     if (reader.GetString(2) == tab)
@@ -296,12 +302,12 @@ namespace phamacist_window
                         string tabquery = "SELECT * FROM " + tab + "";
                         SqlCommand tabcmd = new SqlCommand(tabquery, tabcon);
                         SqlDataReader tabreader = tabcmd.ExecuteReader();
-                        
-                        
+
+
                         while (tabreader.Read())
                         {
 
-                            dataGridView3.Rows.Add(tabreader.GetString(0), tabreader.GetString(1), tabreader.GetString(2),tabreader.GetInt32(4).ToString());
+                            dataGridView3.Rows.Add(tabreader.GetString(0), tabreader.GetString(1), tabreader.GetString(2), tabreader.GetInt32(4).ToString());
                         }
                         break;
                     }
@@ -313,6 +319,25 @@ namespace phamacist_window
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            IssueMedicine();
+        }
+
+        private void tabPage_medicine_Leave(object sender, EventArgs e)
+        {
+            MessageBox.Show("Please save the medicine issued before leaving this tab.");
+        }
+
+        private void dataGridView3_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void dataGridView3_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
