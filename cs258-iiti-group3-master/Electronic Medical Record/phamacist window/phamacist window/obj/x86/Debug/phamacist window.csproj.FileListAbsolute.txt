@@ -1,0 +1,13 @@
+C:\Users\SONY\Desktop\Visual Studio\phamacist window\phamacist window\bin\Debug\phamacist window.exe
+C:\Users\SONY\Desktop\Visual Studio\phamacist window\phamacist window\bin\Debug\phamacist window.pdb
+C:\Users\SONY\Desktop\Visual Studio\phamacist window\phamacist window\obj\x86\Debug\phamacist_window.Form1.resources
+C:\Users\SONY\Desktop\Visual Studio\phamacist window\phamacist window\obj\x86\Debug\phamacist_window.pharmacist_frm.resources
+C:\Users\SONY\Desktop\Visual Studio\phamacist window\phamacist window\obj\x86\Debug\phamacist_window.Properties.Resources.resources
+C:\Users\SONY\Desktop\Visual Studio\phamacist window\phamacist window\obj\x86\Debug\phamacist window.csproj.GenerateResource.Cache
+C:\Users\SONY\Desktop\Visual Studio\phamacist window\phamacist window\obj\x86\Debug\phamacist window.exe
+C:\Users\SONY\Desktop\Visual Studio\phamacist window\phamacist window\obj\x86\Debug\phamacist window.pdb
+C:\Users\SONY\Desktop\Visual Studio\phamacist window\phamacist window\obj\x86\Debug\phamacist_window.password.resources
+C:\Users\SONY\Desktop\Visual Studio\phamacist window\phamacist window\obj\x86\Debug\phamacist_window.userprofile.resources
+C:\Users\SONY\Desktop\Visual Studio\phamacist window\phamacist window\obj\x86\Debug\phamacist_window.Stock.resources
+C:\Users\Manoj\Desktop\cs258-iiti-group3-master\Electronic Medical Record\phamacist window\phamacist window\obj\x86\Debug\phamacist window.exe
+C:\Users\Manoj\Desktop\cs258-iiti-group3-master\Electronic Medical Record\phamacist window\phamacist window\obj\x86\Debug\phamacist window.pdb
