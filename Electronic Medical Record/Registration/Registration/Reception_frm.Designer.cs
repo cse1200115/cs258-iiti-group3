@@ -48,6 +48,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl_reg = new System.Windows.Forms.TabControl();
             this.Reg_pt = new System.Windows.Forms.TabPage();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.textBox_date_time = new System.Windows.Forms.TextBox();
             this.btn_refresh = new System.Windows.Forms.Button();
             this.btn_reg = new System.Windows.Forms.Button();
@@ -342,6 +345,9 @@
             // Reg_pt
             // 
             this.Reg_pt.AccessibleName = "";
+            this.Reg_pt.Controls.Add(this.radioButton3);
+            this.Reg_pt.Controls.Add(this.radioButton2);
+            this.Reg_pt.Controls.Add(this.radioButton1);
             this.Reg_pt.Controls.Add(this.textBox_date_time);
             this.Reg_pt.Controls.Add(this.btn_refresh);
             this.Reg_pt.Controls.Add(this.btn_reg);
@@ -361,6 +367,42 @@
             this.Reg_pt.UseVisualStyleBackColor = true;
             this.Reg_pt.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(475, 142);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(51, 17);
+            this.radioButton3.TabIndex = 15;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Other";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(475, 100);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(59, 17);
+            this.radioButton2.TabIndex = 14;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Faculty";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(475, 64);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(62, 17);
+            this.radioButton1.TabIndex = 13;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Student";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
             // textBox_date_time
             // 
             this.textBox_date_time.Location = new System.Drawing.Point(188, 125);
@@ -376,6 +418,7 @@
             this.btn_refresh.TabIndex = 11;
             this.btn_refresh.Text = "Refresh";
             this.btn_refresh.UseVisualStyleBackColor = true;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
             // btn_reg
             // 
@@ -401,6 +444,7 @@
             this.text_roll.Name = "text_roll";
             this.text_roll.Size = new System.Drawing.Size(200, 20);
             this.text_roll.TabIndex = 6;
+            this.text_roll.TextChanged += new System.EventHandler(this.text_roll_TextChanged);
             // 
             // text_pt
             // 
@@ -735,6 +779,7 @@
             this.button_clear.TabIndex = 86;
             this.button_clear.Text = "Clear";
             this.button_clear.UseVisualStyleBackColor = true;
+            this.button_clear.Click += new System.EventHandler(this.button_clear_Click);
             // 
             // btn_save
             // 
@@ -1047,6 +1092,7 @@
             // 
             // textBox15
             // 
+            this.textBox15.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.textBox15.Location = new System.Drawing.Point(13, 111);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(152, 20);
@@ -1063,6 +1109,7 @@
             this.radioButton19.TabStop = true;
             this.radioButton19.Text = "Other";
             this.radioButton19.UseVisualStyleBackColor = true;
+            this.radioButton19.CheckedChanged += new System.EventHandler(this.radioButton19_CheckedChanged);
             // 
             // radioButton17
             // 
@@ -1074,6 +1121,7 @@
             this.radioButton17.TabStop = true;
             this.radioButton17.Text = "Student";
             this.radioButton17.UseVisualStyleBackColor = true;
+            this.radioButton17.CheckedChanged += new System.EventHandler(this.radioButton17_CheckedChanged);
             // 
             // radioButton18
             // 
@@ -1085,6 +1133,7 @@
             this.radioButton18.TabStop = true;
             this.radioButton18.Text = "Faculty";
             this.radioButton18.UseVisualStyleBackColor = true;
+            this.radioButton18.CheckedChanged += new System.EventHandler(this.radioButton18_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -1628,6 +1677,9 @@
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem1;
         private System.Windows.Forms.TextBox textBox_email;
         private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
 
     }
 }

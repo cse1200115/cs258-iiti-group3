@@ -17,6 +17,8 @@ namespace phamacist_window
         {
             InitializeComponent();
             queue();
+            autocomplete();
+            
         }
         string curr_listbox_item = "";
         string tab="";
@@ -45,6 +47,83 @@ namespace phamacist_window
             }
         }
 
+        void autocomplete()
+        {
+            try
+            {
+
+                AutoCompleteStringCollection coll = new AutoCompleteStringCollection();
+                AutoCompleteStringCollection medcoll = new AutoCompleteStringCollection();
+
+                string str = "Data Source=VAIO\\SQLEXPRESS;Initial Catalog=Medicines;Integrated Security=True";
+                SqlConnection conn = new SqlConnection(str);
+                conn.Open();
+
+                string query = "SELECT * FROM INFORMATION_SCHEMA.tables";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string medicine = reader.GetString(2);
+                    coll.Add(medicine);
+
+                    string[] med = medicine.Split('_');
+                    medcoll.Add(med[0]);
+                    
+                }
+                conn.Close();
+
+                textBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                textBox1.AutoCompleteCustomSource = coll;
+
+                textBox_generic.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                textBox_generic.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                textBox_generic.AutoCompleteCustomSource = medcoll;
+
+                
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        void autofill()
+        {
+            try
+            {
+
+                AutoCompleteStringCollection medcoll = new AutoCompleteStringCollection();
+
+                string str = "Data Source=VAIO\\SQLEXPRESS;Initial Catalog=Medicines;Integrated Security=True";
+                SqlConnection conn = new SqlConnection(str);
+                conn.Open();
+
+                string query = "SELECT * FROM INFORMATION_SCHEMA.tables";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string medicine = reader.GetString(2);
+                    string[] med = medicine.Split('_');
+                    if (med[0] == textBox_generic.Text)
+                    {
+                        medcoll.Add(med[1]);
+                    }
+                    
+                }
+                conn.Close();
+                textBox_type.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                textBox_type.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                textBox_type.AutoCompleteCustomSource = medcoll;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        
+        }
         private void toolStripDropDownButton2_Click(object sender, EventArgs e)
         {
 
@@ -338,6 +417,12 @@ namespace phamacist_window
         private void dataGridView3_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void textBox_generic_TextChanged(object sender, EventArgs e)
+        {
+            textBox_type.Clear();
+            autofill();
         }
     }
 }

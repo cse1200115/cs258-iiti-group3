@@ -33,3 +33,13 @@ C:\Users\SONY\Desktop\Visual Studio\Doctor Window\Doctor Window\obj\x86\Debug\Do
 C:\Users\SONY\Desktop\Visual Studio\Doctor Window\Doctor Window\obj\x86\Debug\Doctor_Window.userProfile.resources
 C:\Users\SONY\Desktop\Visual Studio\Doctor Window\Doctor Window\obj\x86\Debug\Doctor_Window.password.resources
 C:\Users\SONY\Desktop\Visual Studio\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.csprojResolveAssemblyReference.cache
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Doctor Window\Doctor Window\bin\Debug\Doctor Window.exe
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Doctor Window\Doctor Window\bin\Debug\Doctor Window.pdb
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Doctor Window\Doctor Window\obj\x86\Debug\Doctor_Window.Doctor_frm.resources
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Doctor Window\Doctor Window\obj\x86\Debug\Doctor_Window.Form1.resources
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Doctor Window\Doctor Window\obj\x86\Debug\Doctor_Window.password.resources
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Doctor Window\Doctor Window\obj\x86\Debug\Doctor_Window.Properties.Resources.resources
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Doctor Window\Doctor Window\obj\x86\Debug\Doctor_Window.userProfile.resources
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.csproj.GenerateResource.Cache
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.exe
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Doctor Window\Doctor Window\obj\x86\Debug\Doctor Window.pdb

@@ -104,6 +104,10 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dataGridView_new_visit = new System.Windows.Forms.DataGridView();
+            this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Frequency = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CurrentStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.new_img_up_btn = new System.Windows.Forms.Button();
             this.pictureBox_new_visit = new System.Windows.Forms.PictureBox();
@@ -182,15 +186,15 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.listBox_staffs = new System.Windows.Forms.ListBox();
+            this.listBox_faculty = new System.Windows.Forms.ListBox();
             this.print_btn = new System.Windows.Forms.PictureBox();
             this.save_btn = new System.Windows.Forms.PictureBox();
             this.refresh_btn = new System.Windows.Forms.PictureBox();
             this.Cancel_btn = new System.Windows.Forms.PictureBox();
             this.view_chart_btn = new System.Windows.Forms.PictureBox();
-            this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Frequency = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CurrentStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -351,12 +355,12 @@
             // 
             // listBox_patients
             // 
-            this.listBox_patients.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
+            this.listBox_patients.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox_patients.FormattingEnabled = true;
             this.listBox_patients.Location = new System.Drawing.Point(7, 21);
             this.listBox_patients.Name = "listBox_patients";
-            this.listBox_patients.Size = new System.Drawing.Size(154, 498);
+            this.listBox_patients.Size = new System.Drawing.Size(154, 199);
             this.listBox_patients.TabIndex = 2;
             this.listBox_patients.SelectedIndexChanged += new System.EventHandler(this.listBox_patients_SelectedIndexChanged);
             // 
@@ -630,9 +634,9 @@
             this.pictureBox_roll_no.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox_roll_no.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox_roll_no.Location = new System.Drawing.Point(780, 21);
+            this.pictureBox_roll_no.Location = new System.Drawing.Point(829, 21);
             this.pictureBox_roll_no.Name = "pictureBox_roll_no";
-            this.pictureBox_roll_no.Size = new System.Drawing.Size(367, 400);
+            this.pictureBox_roll_no.Size = new System.Drawing.Size(229, 251);
             this.pictureBox_roll_no.TabIndex = 14;
             this.pictureBox_roll_no.TabStop = false;
             // 
@@ -950,6 +954,34 @@
             this.dataGridView_new_visit.Name = "dataGridView_new_visit";
             this.dataGridView_new_visit.Size = new System.Drawing.Size(835, 163);
             this.dataGridView_new_visit.TabIndex = 1;
+            // 
+            // dataGridViewComboBoxColumn1
+            // 
+            this.dataGridViewComboBoxColumn1.HeaderText = "Generic & Type";
+            this.dataGridViewComboBoxColumn1.Name = "dataGridViewComboBoxColumn1";
+            this.dataGridViewComboBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewComboBoxColumn1.Width = 250;
+            // 
+            // dataGridViewComboBoxColumn2
+            // 
+            this.dataGridViewComboBoxColumn2.HeaderText = "Quantity";
+            this.dataGridViewComboBoxColumn2.Name = "dataGridViewComboBoxColumn2";
+            this.dataGridViewComboBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewComboBoxColumn2.Width = 150;
+            // 
+            // Frequency
+            // 
+            this.Frequency.HeaderText = "Frequency";
+            this.Frequency.Name = "Frequency";
+            this.Frequency.Width = 200;
+            // 
+            // CurrentStock
+            // 
+            this.CurrentStock.HeaderText = "CurrentStock";
+            this.CurrentStock.Name = "CurrentStock";
+            this.CurrentStock.Width = 150;
             // 
             // groupBox7
             // 
@@ -1305,6 +1337,7 @@
             this.radioButton_others.TabStop = true;
             this.radioButton_others.Text = "Others";
             this.radioButton_others.UseVisualStyleBackColor = true;
+            this.radioButton_others.CheckedChanged += new System.EventHandler(this.radioButton_others_CheckedChanged);
             // 
             // radioButton_faculty
             // 
@@ -1316,6 +1349,7 @@
             this.radioButton_faculty.TabStop = true;
             this.radioButton_faculty.Text = "Faculty";
             this.radioButton_faculty.UseVisualStyleBackColor = true;
+            this.radioButton_faculty.CheckedChanged += new System.EventHandler(this.radioButton_faculty_CheckedChanged);
             // 
             // radioButton_student
             // 
@@ -1327,6 +1361,7 @@
             this.radioButton_student.TabStop = true;
             this.radioButton_student.Text = "Student";
             this.radioButton_student.UseVisualStyleBackColor = true;
+            this.radioButton_student.CheckedChanged += new System.EventHandler(this.radioButton_student_CheckedChanged);
             // 
             // groupBox8
             // 
@@ -1369,7 +1404,7 @@
             this.groupBox8.Controls.Add(this.label47);
             this.groupBox8.Location = new System.Drawing.Point(160, 101);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(841, 484);
+            this.groupBox8.Size = new System.Drawing.Size(873, 484);
             this.groupBox8.TabIndex = 0;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Patient\'s Detail";
@@ -1396,7 +1431,7 @@
             // 
             this.richTextBox_vpd_permanent_add.Location = new System.Drawing.Point(152, 382);
             this.richTextBox_vpd_permanent_add.Name = "richTextBox_vpd_permanent_add";
-            this.richTextBox_vpd_permanent_add.Size = new System.Drawing.Size(226, 94);
+            this.richTextBox_vpd_permanent_add.Size = new System.Drawing.Size(281, 94);
             this.richTextBox_vpd_permanent_add.TabIndex = 71;
             this.richTextBox_vpd_permanent_add.Text = "";
             // 
@@ -1571,9 +1606,9 @@
             // pictureBox_vpd_img
             // 
             this.pictureBox_vpd_img.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox_vpd_img.Location = new System.Drawing.Point(652, 31);
+            this.pictureBox_vpd_img.Location = new System.Drawing.Point(632, 31);
             this.pictureBox_vpd_img.Name = "pictureBox_vpd_img";
-            this.pictureBox_vpd_img.Size = new System.Drawing.Size(147, 154);
+            this.pictureBox_vpd_img.Size = new System.Drawing.Size(207, 203);
             this.pictureBox_vpd_img.TabIndex = 48;
             this.pictureBox_vpd_img.TabStop = false;
             // 
@@ -1588,9 +1623,9 @@
             // 
             // richTextBox_vpd_obsevation
             // 
-            this.richTextBox_vpd_obsevation.Location = new System.Drawing.Point(394, 282);
+            this.richTextBox_vpd_obsevation.Location = new System.Drawing.Point(447, 282);
             this.richTextBox_vpd_obsevation.Name = "richTextBox_vpd_obsevation";
-            this.richTextBox_vpd_obsevation.Size = new System.Drawing.Size(411, 194);
+            this.richTextBox_vpd_obsevation.Size = new System.Drawing.Size(392, 199);
             this.richTextBox_vpd_obsevation.TabIndex = 46;
             this.richTextBox_vpd_obsevation.Text = "";
             // 
@@ -1598,14 +1633,14 @@
             // 
             this.richTextBox_vpd_local_add.Location = new System.Drawing.Point(152, 282);
             this.richTextBox_vpd_local_add.Name = "richTextBox_vpd_local_add";
-            this.richTextBox_vpd_local_add.Size = new System.Drawing.Size(226, 94);
+            this.richTextBox_vpd_local_add.Size = new System.Drawing.Size(281, 94);
             this.richTextBox_vpd_local_add.TabIndex = 45;
             this.richTextBox_vpd_local_add.Text = "";
             // 
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(391, 266);
+            this.label40.Location = new System.Drawing.Point(444, 266);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(69, 13);
             this.label40.TabIndex = 44;
@@ -1705,6 +1740,10 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox1.Controls.Add(this.label52);
+            this.groupBox1.Controls.Add(this.label51);
+            this.groupBox1.Controls.Add(this.listBox_staffs);
+            this.groupBox1.Controls.Add(this.listBox_faculty);
             this.groupBox1.Controls.Add(this.listBox_patients);
             this.groupBox1.Location = new System.Drawing.Point(12, 86);
             this.groupBox1.Name = "groupBox1";
@@ -1712,6 +1751,47 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registered Pateints";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(6, 232);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(49, 13);
+            this.label52.TabIndex = 6;
+            this.label52.Text = "Faculties";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(4, 388);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(63, 13);
+            this.label51.TabIndex = 5;
+            this.label51.Text = "Other Staffs";
+            // 
+            // listBox_staffs
+            // 
+            this.listBox_staffs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox_staffs.FormattingEnabled = true;
+            this.listBox_staffs.Location = new System.Drawing.Point(6, 404);
+            this.listBox_staffs.Name = "listBox_staffs";
+            this.listBox_staffs.Size = new System.Drawing.Size(155, 108);
+            this.listBox_staffs.TabIndex = 4;
+            this.listBox_staffs.SelectedIndexChanged += new System.EventHandler(this.listBox_staffs_SelectedIndexChanged);
+            // 
+            // listBox_faculty
+            // 
+            this.listBox_faculty.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox_faculty.FormattingEnabled = true;
+            this.listBox_faculty.Location = new System.Drawing.Point(6, 252);
+            this.listBox_faculty.Name = "listBox_faculty";
+            this.listBox_faculty.Size = new System.Drawing.Size(155, 134);
+            this.listBox_faculty.TabIndex = 3;
+            this.listBox_faculty.SelectedIndexChanged += new System.EventHandler(this.listBox_faculty_SelectedIndexChanged);
             // 
             // print_btn
             // 
@@ -1760,34 +1840,6 @@
             this.view_chart_btn.Size = new System.Drawing.Size(52, 50);
             this.view_chart_btn.TabIndex = 19;
             this.view_chart_btn.TabStop = false;
-            // 
-            // dataGridViewComboBoxColumn1
-            // 
-            this.dataGridViewComboBoxColumn1.HeaderText = "Generic & Type";
-            this.dataGridViewComboBoxColumn1.Name = "dataGridViewComboBoxColumn1";
-            this.dataGridViewComboBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewComboBoxColumn1.Width = 250;
-            // 
-            // dataGridViewComboBoxColumn2
-            // 
-            this.dataGridViewComboBoxColumn2.HeaderText = "Quantity";
-            this.dataGridViewComboBoxColumn2.Name = "dataGridViewComboBoxColumn2";
-            this.dataGridViewComboBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewComboBoxColumn2.Width = 150;
-            // 
-            // Frequency
-            // 
-            this.Frequency.HeaderText = "Frequency";
-            this.Frequency.Name = "Frequency";
-            this.Frequency.Width = 200;
-            // 
-            // CurrentStock
-            // 
-            this.CurrentStock.HeaderText = "CurrentStock";
-            this.CurrentStock.Name = "CurrentStock";
-            this.CurrentStock.Width = 150;
             // 
             // Doctor_frm
             // 
@@ -1844,6 +1896,7 @@
             this.groupBox8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_vpd_img)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.print_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.save_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.refresh_btn)).EndInit();
@@ -2018,5 +2071,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Frequency;
         private System.Windows.Forms.DataGridViewTextBoxColumn CurrentStock;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.ListBox listBox_staffs;
+        private System.Windows.Forms.ListBox listBox_faculty;
     }
 }

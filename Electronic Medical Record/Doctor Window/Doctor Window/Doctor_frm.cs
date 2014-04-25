@@ -20,14 +20,39 @@ namespace Doctor_Window
         {
             InitializeComponent();
             queue();
-            prevVisits();
+           
         }
 
         string str ="Data Source=VAIO\\SQLEXPRESS;Initial Catalog=Medical_Records;Integrated Security=True";
-        string curr_listbox_item="";
-        string img_path="";
+        string curr_listbox_item_st="",curr_listbox_item_fa="",curr_listbox_item_ot="";
+        string img_path="",occupation="";
 
-        
+
+        void AutoComplete()
+        {
+            if (occupation == "")
+                MessageBox.Show("Select occupation");
+            else
+            {
+                AutoCompleteStringCollection coll = new AutoCompleteStringCollection();
+                SqlConnection conn = new SqlConnection(str);
+                conn.Open();
+                string query="SELECT * FROM "+occupation+"";
+                SqlCommand cmd = new SqlCommand(query,conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    coll.Add(reader["ID"].ToString());
+                }
+
+                textBox_search.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                textBox_search.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                textBox_search.AutoCompleteCustomSource = coll;
+
+
+            }
+        }
         private void queue()
         {
             try
@@ -41,7 +66,13 @@ namespace Doctor_Window
                 while (reader.Read())
                 {
                     string id = reader.GetString(0);
-                    listBox_patients.Items.Add(id);
+
+                    if (reader.GetString(4) == "Student")
+                        listBox_patients.Items.Add(id);
+                    else if (reader.GetString(4) == "Faculty")
+                        listBox_faculty.Items.Add(id);
+                    else if (reader.GetString(4) == "Others")
+                        listBox_staffs.Items.Add(id);
                 }
                 conn.Close();
             }
@@ -50,28 +81,7 @@ namespace Doctor_Window
                 MessageBox.Show(ex.Message);
             }
         }
-        private void prevVisits()
-        {
-            try
-            {
-                SqlConnection conn = new SqlConnection(str);
-                conn.Open();
-                string query = "SELECT * FROM '"+curr_listbox_item+"';";
-                SqlCommand cmd = new SqlCommand(query, conn);
-
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    string date_time = reader.GetString(0);
-                    listBox_patients.Items.Add(date_time);
-                }
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-               MessageBox.Show(ex.Message);
-            }
-        }
+        
         private void changeUsernameToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -180,7 +190,7 @@ namespace Doctor_Window
                 MessageBox.Show(ex.Message);
             }
         }
-
+        string s,sr,occu;
         private void save_btn_Click(object sender, EventArgs e)
         {
             if (tabControl1.SelectedTab == tabPage3)
@@ -203,9 +213,18 @@ namespace Doctor_Window
 
                     SqlConnection conn = new SqlConnection(str);
                     conn.Open();
+                    
+
+                    if (curr_listbox_item_st != "")
+                        sr = curr_listbox_item_st;
+                    else if (curr_listbox_item_fa != "")
+                        sr = curr_listbox_item_fa;
+                    else if (curr_listbox_item_ot != "")
+                        sr = curr_listbox_item_ot;
+
                     if (img_path=="")
                     {
-                        string query = "INSERT INTO " + curr_listbox_item + "(Date_Time,Chief_Complaint,Diagnosis,Observation,Generic_Name,Doses,Frequency)VALUES('" + date_time + "','" + this.richTextBox_new_chief_complaint.Text + "','" + this.richTextBox_next_diagnosis.Text + "','" + this.richTextBox_next_observation.Text + "','" + generic_type + "','" + doses + "','" + frequncy + "')";
+                        string query = "INSERT INTO " + sr + "(Date_Time,Chief_Complaint,Diagnosis,Observation,Generic_Name,Doses,Frequency)VALUES('" + date_time + "','" + this.richTextBox_new_chief_complaint.Text + "','" + this.richTextBox_next_diagnosis.Text + "','" + this.richTextBox_next_observation.Text + "','" + generic_type + "','" + doses + "','" + frequncy + "')";
                         SqlCommand cmd = new SqlCommand(query,conn);
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Data Inserted Successfully");
@@ -217,7 +236,7 @@ namespace Doctor_Window
                         BinaryReader br = new BinaryReader(fstream);
                         img = br.ReadBytes((int)fstream.Length);
 
-                        string query = "INSERT INTO " + curr_listbox_item + "(Date_Time,Chief_Complaint,Diagnosis,Observation,Image_docs,Generic_Name,Doses,Frequency)VALUES('" + date_time + "','" + this.richTextBox_new_chief_complaint.Text + "','" + this.richTextBox_next_diagnosis.Text + "','" + this.richTextBox_next_observation.Text + "',@IMG,'" + generic_type + "','" + doses + "','" + frequncy + "')";
+                        string query = "INSERT INTO " + strr + "(Date_Time,Chief_Complaint,Diagnosis,Observation,Image_docs,Generic_Name,Doses,Frequency)VALUES('" + date_time + "','" + this.richTextBox_new_chief_complaint.Text + "','" + this.richTextBox_next_diagnosis.Text + "','" + this.richTextBox_next_observation.Text + "',@IMG,'" + generic_type + "','" + doses + "','" + frequncy + "')";
                         SqlCommand cmd = new SqlCommand(query, conn);
                         cmd.Parameters.Add(new SqlParameter("@IMG", img));
                         cmd.ExecuteNonQuery();
@@ -225,7 +244,7 @@ namespace Doctor_Window
 
                         MessageBox.Show("Data Inserted Successfully");
                     }
-                    
+                    strr = "";
                 }
                 catch (Exception ex)
                 {
@@ -238,11 +257,28 @@ namespace Doctor_Window
                 {
                     SqlConnection conn = new SqlConnection(str);
                     conn.Open();
-                    string query = "UPDATE Student SET Allergy='" + richTextBox_allergy.Text + "',Observations='" + richTextBox_oservation.Text + "',Family_history='" + richTextBox_rich_history.Text + "',Social_history='" + richTextBox_social_history.Text + "' WHERE ID='"+curr_listbox_item+"'";
+
+                    if (curr_listbox_item_st != "")
+                    {
+                        s = curr_listbox_item_st;
+                        occu = "Student";
+                    }
+                    else if (curr_listbox_item_fa != "")
+                    {
+                        s = curr_listbox_item_fa;
+                        occu = "Faculty";
+                    }
+                    else if (curr_listbox_item_ot != "")
+                    {
+                        s = curr_listbox_item_ot;
+                        occu = "Others";
+                    }
+                    string query = "UPDATE "+occu+" SET Allergy='" + richTextBox_allergy.Text + "',Observations='" + richTextBox_oservation.Text + "',Family_history='" + richTextBox_rich_history.Text + "',Social_history='" + richTextBox_social_history.Text + "' WHERE ID='"+s+"'";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     MessageBox.Show("Data saved Succsessfully");
+                    
                 }
                 catch (Exception ex)
                 {
@@ -256,12 +292,22 @@ namespace Doctor_Window
 
         }
 
+        string strr;
         void LoadImages()
         {
             try
             {
                 SqlConnection conn = new SqlConnection(str);
-                string query = "SELECT * FROM " + curr_listbox_item + " WHERE Image_docs IS NOT NULL";
+                
+
+                if (curr_listbox_item_st != "")
+                    strr = curr_listbox_item_st;
+                else if (curr_listbox_item_fa != "")
+                    strr = curr_listbox_item_fa;
+                else if (curr_listbox_item_ot != "")
+                    strr = curr_listbox_item_ot;
+
+                string query = "SELECT * FROM " + strr + " WHERE Image_docs IS NOT NULL";
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -281,11 +327,14 @@ namespace Doctor_Window
         }
         private void listBox_patients_SelectedIndexChanged(object sender, EventArgs e)
         {
-            curr_listbox_item = listBox_patients.SelectedItem.ToString();
 
+            
             try
-            {
-                string query = "SELECT * FROM Student WHERE ID='"+curr_listbox_item+"';";
+            {                
+                curr_listbox_item_st = listBox_patients.SelectedItem.ToString();
+                curr_listbox_item_ot = ""; curr_listbox_item_fa = "";              
+                
+                string query = "SELECT * FROM Student WHERE ID='"+curr_listbox_item_st+"'";
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -297,6 +346,7 @@ namespace Doctor_Window
                 textBox5_dob.Clear();
                 textBox_education.Clear();
                 textBox_branch.Clear();
+                textBox_occupation.Clear();
                 textBox_Y_of_joining.Clear();
                 textBox_roll_no.Clear();
                 textBox_gender.Clear();
@@ -319,6 +369,7 @@ namespace Doctor_Window
 
                 if (reader.Read())
                 {
+                    textBox_occupation.Text = "Student";
                     textBox_fname.Text = reader.GetString(0);
                     textBox_mname.Text = reader.GetString(1);
                     textBox_lname.Text = reader.GetString(2); 
@@ -335,7 +386,10 @@ namespace Doctor_Window
                     textBox_martial_status.Text=reader.GetString(14);
                     textBox_blood.Text = reader.GetString(15);
                     textBox_emailid.Text = reader.GetString(22);
-                    richTextBox_observation.Text = reader.GetString(19);
+                    if (reader.GetString(19) == null)
+                        richTextBox_observation.Text = "";
+                    else
+                        richTextBox_observation.Text = reader.GetString(19);
 
                     //for allergy tab.
                     richTextBox_allergy.Text = reader.GetString(18);
@@ -353,12 +407,15 @@ namespace Doctor_Window
                         MemoryStream ms = new MemoryStream(imgg);
                         pictureBox_roll_no.Image = System.Drawing.Image.FromStream(ms);
                     }
+                    
                 }
                 else
                 {
                     MessageBox.Show("Data not present");
                 }
 
+                
+                    
                 //show all the previous visits.
                 PreviousVisits();
                 LoadImages();
@@ -382,6 +439,7 @@ namespace Doctor_Window
             }
         }
 
+        string p;
         private void listBox_prevvisits_SelectedIndexChanged(object sender, EventArgs e)
         {
             string date = listBox_prevvisits.SelectedItem.ToString();
@@ -391,7 +449,15 @@ namespace Doctor_Window
             {
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
-                string query = "SELECT * FROM "+curr_listbox_item+" WHERE Date_Time ='"+date+"'";
+                
+                if (curr_listbox_item_st != "")
+                    p = curr_listbox_item_st;
+                else if (curr_listbox_item_fa != "")
+                    p = curr_listbox_item_fa;
+                else if (curr_listbox_item_ot != "")
+                    p = curr_listbox_item_ot;
+
+                string query = "SELECT * FROM "+p+" WHERE Date_Time ='"+date+"'";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -414,7 +480,7 @@ namespace Doctor_Window
                    for (int i = 0; i < med.Length-1; i++)
                        dataGridView_previous.Rows.Add(med[i], dos[i], freq[i]);
                 }
-            
+                p = "";
             }
             catch(Exception ex)
             {
@@ -423,15 +489,24 @@ namespace Doctor_Window
 
         }
 
+        string que;
         private void textBox_search_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                
+                if (occupation == "")
+                    MessageBox.Show("Please enter Occupation");
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
-                string query = "SELECT * FROM Student WHERE ID = '"+textBox_search.Text+"'";
-                SqlCommand cmd = new SqlCommand(query, conn);
+
+                if(occupation=="Student")
+                  que = "SELECT * FROM Student WHERE ID = '"+textBox_search.Text+"'";
+                else if(occupation=="Faculty")
+                    que = "SELECT * FROM Faculty WHERE ID = '" + textBox_search.Text + "'";
+                else if(occupation=="Others")
+                    que = "SELECT * FROM Others WHERE ID = '" + textBox_search.Text + "'";
+
+                SqlCommand cmd = new SqlCommand(que, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 textBox_vpd_fname.Clear();
@@ -497,6 +572,7 @@ namespace Doctor_Window
             }
         }
 
+        string p1;
         private void listBox_image_SelectedIndexChanged(object sender, EventArgs e)
         {
             string date = listBox_image.SelectedItem.ToString();
@@ -505,7 +581,14 @@ namespace Doctor_Window
             {
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
-                string query = "SELECT * FROM " + curr_listbox_item + " WHERE Date_Time ='" + date + "'";
+
+                if (curr_listbox_item_st != "")
+                    p1 = curr_listbox_item_st;
+                else if (curr_listbox_item_fa != "")
+                    p1 = curr_listbox_item_fa;
+                else if (curr_listbox_item_ot != "")
+                    p1 = curr_listbox_item_ot;
+                string query = "SELECT * FROM " + p1 + " WHERE Date_Time ='" + date + "'";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
                 
@@ -527,7 +610,8 @@ namespace Doctor_Window
                     pictureBox_img.Image = null;
                     MessageBox.Show("Data not present in the list");
                 }
-            }
+                p1 = "";
+            }   
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -575,14 +659,23 @@ namespace Doctor_Window
         {
 
         }
-
+        string st;
         void PreviousVisits()
         {
             try
             {
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
-                string query = "SELECT * FROM " + curr_listbox_item + "";
+
+                if (curr_listbox_item_st != "")
+                    st = curr_listbox_item_st;
+                else if (curr_listbox_item_fa != "")
+                    st = curr_listbox_item_fa;
+                else if (curr_listbox_item_ot != "")
+                    st = curr_listbox_item_ot;
+
+               
+                string query = "SELECT * FROM " + st+ "";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -591,6 +684,8 @@ namespace Doctor_Window
                 {
                     listBox_prevvisits.Items.Add(reader.GetString(0));
                 }
+
+                st = "";
             }
             catch (Exception ex)
             {
@@ -600,6 +695,220 @@ namespace Doctor_Window
         private void tabPage2_Click(object sender, EventArgs e)
         {
             //PreviousVisits();
+        }
+
+        private void listBox_faculty_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+
+            try
+            {
+               
+
+                curr_listbox_item_fa = listBox_faculty.SelectedItem.ToString();
+                curr_listbox_item_ot = ""; curr_listbox_item_st = "";
+
+                string query = "SELECT * FROM Faculty WHERE ID='" + curr_listbox_item_fa + "';";
+                SqlConnection conn = new SqlConnection(str);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                textBox_fname.Clear();
+                textBox_mname.Clear();
+                textBox_lname.Clear();
+                textBox5_dob.Clear();
+                textBox_education.Clear();
+                textBox_branch.Clear();
+                textBox_occupation.Clear();
+                textBox_Y_of_joining.Clear();
+                textBox_roll_no.Clear();
+                textBox_gender.Clear();
+                richTextBox_permanent_Add.Clear();
+                richTextBox_local_add.Clear();
+                textBox_pt_record.Clear();
+                textBox_gud_contact.Clear();
+                textBox_martial_status.Clear();
+                textBox_blood.Clear();
+                textBox_emailid.Clear();
+                richTextBox_observation.Clear();
+
+                //for allergy tab.
+                richTextBox_allergy.Clear();
+                richTextBox_oservation.Clear();
+                richTextBox_rich_history.Clear();
+                richTextBox_social_history.Clear();
+                pictureBox_roll_no.Image = null;
+
+
+                if (reader.Read())
+                {
+                    textBox_occupation.Text = "Faculty";
+                    textBox_fname.Text = reader.GetString(0);
+                    textBox_mname.Text = reader.GetString(1);
+                    textBox_lname.Text = reader.GetString(2);
+                    textBox5_dob.Text = reader.GetString(3);
+                    textBox_education.Text = reader.GetString(4);
+                    textBox_branch.Text = reader.GetString(5);
+                    textBox_Y_of_joining.Text = reader.GetString(6);
+                    textBox_roll_no.Text = reader.GetString(7);
+                    textBox_gender.Text = reader.GetString(8);
+                    richTextBox_permanent_Add.Text = reader.GetString(10);
+                    richTextBox_local_add.Text = reader.GetString(11);
+                    textBox_pt_record.Text = reader.GetString(12);
+                    textBox_gud_contact.Text = reader.GetString(13);
+                    textBox_martial_status.Text = reader.GetString(14);
+                    textBox_blood.Text = reader.GetString(15);
+                    textBox_emailid.Text = reader.GetString(22);
+                    richTextBox_observation.Text = reader.GetString(19);
+
+                    //for allergy tab.
+                    richTextBox_allergy.Text = reader.GetString(18);
+                    richTextBox_oservation.Text = reader.GetString(19);
+                    richTextBox_rich_history.Text = reader.GetString(20);
+                    richTextBox_social_history.Text = reader.GetString(21);
+
+                    byte[] imgg = (byte[])(reader["Image"]);
+                    if (imgg == null)
+                    {
+                        pictureBox_roll_no.Image = null;
+                    }
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream(imgg);
+                        pictureBox_roll_no.Image = System.Drawing.Image.FromStream(ms);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Data not present");
+                }
+
+                //show all the previous visits.
+                PreviousVisits();
+                LoadImages();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        private void listBox_staffs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+
+            try
+            {
+                //listBox_faculty.ClearSelected();
+                //listBox_patients.ClearSelected();
+
+                curr_listbox_item_ot = listBox_staffs.SelectedItem.ToString();
+                curr_listbox_item_fa = ""; curr_listbox_item_st = "";
+
+                string query = "SELECT * FROM Others WHERE ID='" + curr_listbox_item_ot + "';";
+                SqlConnection conn = new SqlConnection(str);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                textBox_fname.Clear();
+                textBox_mname.Clear();
+                textBox_lname.Clear();
+                textBox5_dob.Clear();
+                textBox_education.Clear();
+                textBox_branch.Clear();
+                textBox_occupation.Clear();
+                textBox_Y_of_joining.Clear();
+                textBox_roll_no.Clear();
+                textBox_gender.Clear();
+                richTextBox_permanent_Add.Clear();
+                richTextBox_local_add.Clear();
+                textBox_pt_record.Clear();
+                textBox_gud_contact.Clear();
+                textBox_martial_status.Clear();
+                textBox_blood.Clear();
+                textBox_emailid.Clear();
+                richTextBox_observation.Clear();
+
+                //for allergy tab.
+                richTextBox_allergy.Clear();
+                richTextBox_oservation.Clear();
+                richTextBox_rich_history.Clear();
+                richTextBox_social_history.Clear();
+                pictureBox_roll_no.Image = null;
+
+
+                if (reader.Read())
+                {
+                    textBox_occupation.Text = "Staff";
+                    textBox_fname.Text = reader.GetString(0);
+                    textBox_mname.Text = reader.GetString(1);
+                    textBox_lname.Text = reader.GetString(2);
+                    textBox5_dob.Text = reader.GetString(3);
+                    textBox_education.Text = reader.GetString(4);
+                    textBox_branch.Text = reader.GetString(5);
+                    textBox_Y_of_joining.Text = reader.GetString(6);
+                    textBox_roll_no.Text = reader.GetString(7);
+                    textBox_gender.Text = reader.GetString(8);
+                    richTextBox_permanent_Add.Text = reader.GetString(10);
+                    richTextBox_local_add.Text = reader.GetString(11);
+                    textBox_pt_record.Text = reader.GetString(12);
+                    textBox_gud_contact.Text = reader.GetString(13);
+                    textBox_martial_status.Text = reader.GetString(14);
+                    textBox_blood.Text = reader.GetString(15);
+                    textBox_emailid.Text = reader.GetString(22);
+                    richTextBox_observation.Text = reader.GetString(19);
+
+                    //for allergy tab.
+                    richTextBox_allergy.Text = reader.GetString(18);
+                    richTextBox_oservation.Text = reader.GetString(19);
+                    richTextBox_rich_history.Text = reader.GetString(20);
+                    richTextBox_social_history.Text = reader.GetString(21);
+
+                    byte[] imgg = (byte[])(reader["Image"]);
+                    if (imgg == null)
+                    {
+                        pictureBox_roll_no.Image = null;
+                    }
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream(imgg);
+                        pictureBox_roll_no.Image = System.Drawing.Image.FromStream(ms);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Data not present");
+                }
+
+                //show all the previous visits.
+                PreviousVisits();
+                LoadImages();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void radioButton_student_CheckedChanged(object sender, EventArgs e)
+        {
+            occupation = "Student";
+            AutoComplete();
+        }
+
+        private void radioButton_faculty_CheckedChanged(object sender, EventArgs e)
+        {
+            occupation = "Faculty";
+            AutoComplete();
+        }
+
+        private void radioButton_others_CheckedChanged(object sender, EventArgs e)
+        {
+            occupation = "Others";
+            AutoComplete();
         }
     }
 }

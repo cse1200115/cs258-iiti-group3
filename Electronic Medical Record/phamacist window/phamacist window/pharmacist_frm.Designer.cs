@@ -428,6 +428,7 @@
             this.textBox_generic.Name = "textBox_generic";
             this.textBox_generic.Size = new System.Drawing.Size(172, 20);
             this.textBox_generic.TabIndex = 19;
+            this.textBox_generic.TextChanged += new System.EventHandler(this.textBox_generic_TextChanged);
             // 
             // label3
             // 

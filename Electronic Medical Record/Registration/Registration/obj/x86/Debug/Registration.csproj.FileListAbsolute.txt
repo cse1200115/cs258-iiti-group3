@@ -10,3 +10,15 @@ C:\Users\SONY\Desktop\Visual Studio\Registration\Registration\obj\x86\Debug\Regi
 C:\Users\SONY\Desktop\Visual Studio\Registration\Registration\obj\x86\Debug\Registration.csproj.GenerateResource.Cache
 C:\Users\SONY\Desktop\Visual Studio\Registration\Registration\obj\x86\Debug\Registration.exe
 C:\Users\SONY\Desktop\Visual Studio\Registration\Registration\obj\x86\Debug\Registration.pdb
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Registration\Registration\obj\x86\Debug\Interop.DtrHostLib.dll
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Registration\Registration\obj\x86\Debug\Registration.csproj.ResolveComReference.cache
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Registration\Registration\obj\x86\Debug\Registration.exe
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Registration\Registration\obj\x86\Debug\Registration.pdb
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Registration\Registration\bin\Debug\Registration.exe
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Registration\Registration\bin\Debug\Registration.pdb
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Registration\Registration\obj\x86\Debug\Registration.Login_frm.resources
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Registration\Registration\obj\x86\Debug\Registration.newuser_frm.resources
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Registration\Registration\obj\x86\Debug\Registration.password.resources
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Registration\Registration\obj\x86\Debug\Registration.Properties.Resources.resources
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Registration\Registration\obj\x86\Debug\Registration.Reception_frm.resources
+C:\Users\SONY\Desktop\cs258-iiti-group3-master\Electronic Medical Record\Registration\Registration\obj\x86\Debug\Registration.csproj.GenerateResource.Cache
